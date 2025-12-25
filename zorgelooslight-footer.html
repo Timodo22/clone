@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/> <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="" name="Keywords"/>
+<meta content="Je hebt een MorgenZorgeloos Light website bekeken. Laagdrempelig met een sterke focus op conversie." name="Description"/>
+<link href="https://morgeninternet.nl/pages/menu/zorgelooslight-footer" rel="canonical"/>
+<link href="/upload/logo/website_other_image_17424007601102690627.svg" rel="apple-touch-icon"/>
+<meta content="Je zat op een MorgenZorgeloos Light website | Morgen Internet" property="og:title"/>
+<meta content="https://morgeninternet.nl/upload/logo/logo_images_0_1741009073948276932.svg" property="og:image"/>
+<meta content="Je hebt een MorgenZorgeloos Light website bekeken. Laagdrempelig met een sterke focus op conversie." property="og:description"/>
+<meta content="https://morgeninternet.nl/pages/menu/zorgelooslight-footer" property="og:url"/>
+<meta content="Morgen Internet" property="og:site_name"/>
+<meta content="website" property="og:type">
+<meta content="https://morgeninternet.nl/upload/logo/logo_images_0_1741009073948276932.svg" name="twitter:card"/>
+<title>
+        Je zat op een MorgenZorgeloos Light website | Morgen Internet    </title>
+<link href="/favicon_images_0_17516295171590926187.png" rel="icon" type="image/x-icon"><link href="/favicon_images_0_17516295171590926187.png" rel="shortcut icon" type="image/x-icon"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/responsive.css" rel="stylesheet"/>
+<link href="css/notifyBar.css" rel="stylesheet"/>
+<link href="css/validationEngine.jquery.css" rel="stylesheet"/>
+<link href="css/fancybox.css" rel="stylesheet"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/jquery.notifyBar.js"></script>
+<script src="js/jquery.validationEngine.js"></script>
+<script src="js/jquery.validationEngine-en.js"></script>
+<script src="js/fancybox.umd.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="js/js.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JSZ6FHHK8C');
+</script><!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '876924977268557');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" src="images/tr.jpg" style="display:none" width="1"/></noscript>
+<!-- End Meta Pixel Code -->
+<meta content="1n0uwt195d0mu8h5lowvywod4s45pv" name="facebook-domain-verification">
+</meta></link></meta></head>
+<body class="">
+<div id="page ">
+<!--==========================header area===================-->
+<!-- Code provided by Google -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'nl', autoDisplay: false}, 'google_translate_element'); //remove the layout
+  }
+</script>
+<script src="js/element.js" type="text/javascript"></script>
+<script type="text/javascript">
+	if(sessionStorage.getItem('lenis_scroll'))
+	{
+		sessionStorage.removeItem('lenis_scroll');
+	}
+	sessionStorage.setItem('lenis_scroll', 1);
+	
+	
+	/*function triggerHtmlEvent(element, eventName) {
+		var event;
+		if(document.createEvent) {
+			event = document.createEvent('HTMLEvents');
+			event.initEvent(eventName, true, true);
+			element.dispatchEvent(event);
+		} else {
+			event = document.createEventObject();
+			event.eventType = eventName;
+			element.fireEvent('on' + event.eventType, event);
+		}
+	}*/
+	$(window).on("load", function(){
+		var hash = window.location.hash;
+		if(hash != "")
+		{
+			//Do nothing
+		}
+		else
+		{
+			var lang_to = $.inArray($('html')[0].lang, ["nl", "de", "en", "fr", "ar", "zh-CN"]) > -1 ? $('html')[0].lang : "nl";
+			hash = "#googtrans(nl|"+lang_to+")";
+		}
+		console.log(hash);
+		$('.translation-links a').removeClass("active_flag");
+		$('.translation-links a[href="'+hash+'"]').addClass("active_flag");
+		$('.lang_class').text($('.translation-links a[href="'+hash+'"]').attr('data-val').toUpperCase());
+		var act_flag = $(".active_flag").data("val");
+		var basePath = "/";
+		let imgSrc = basePath+'images/flags/flag-'+act_flag+'.png';
+
+		// Update or add the image
+		$('.lang_img').html('<img src="'+imgSrc+' "alt="'+imgSrc+'"/>');
+
+
+	});
+	$(function(){
+		<!-- Flag click handler -->
+		$('.translation-links a').click(function(e) {
+			/*e.preventDefault();
+			$('.translation-links a').removeClass("active_flag");
+			$(this).addClass("active_flag");
+			var lang = $(this).data('lang');
+			$('#google_translate_element select option').each(function(){
+				if($(this).text().indexOf(lang) > -1) {
+					$(this).parent().val($(this).val());
+					var container = document.getElementById('google_translate_element');
+					var select = container.getElementsByTagName('select')[0];
+					triggerHtmlEvent(select, 'change');
+				}
+			});*/
+			if($(this).attr('href') == "#googtrans(nl|nl)")
+			{
+				/*var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+				if(!iframe) return;
+				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+				var restore_el = innerDoc.getElementsByTagName("button");
+
+				for(var i = 0; i < restore_el.length; i++){
+					if(restore_el[i].id.indexOf("restore") >= 0) {
+						restore_el[i].click();
+						var close_el = innerDoc.getElementsByClassName("goog-close-link");
+						close_el[0].click();
+					}
+				}*/
+				/*var iframe = document.getElementsByTagName('iframe')[0];
+				if(!iframe) return;
+				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+				var restore_el = innerDoc.getElementsByTagName("button");
+				for(var i = 0; i < restore_el.length; i++){
+					if(restore_el[i].id.indexOf("restore") >= 0) {
+						restore_el[i].click();
+					}
+				}
+				var cancel_el = innerDoc.getElementsByTagName("a");
+
+				for(var i = 0; i < cancel_el.length; i++){
+					if(cancel_el[i].id.indexOf("close") >= 0) {
+						cancel_el[i].click();
+					}
+				}*/
+			}
+			window.location = $(this).attr('href');
+			location.reload();
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			type:"POST",
+			dataType: 'json',
+			url:"/pages/generate-user-activity-xml",
+			beforeSend: function(){
+				//$(".loading_img_div").fadeIn("slow");
+			},
+			headers : {
+				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
+			},
+			success: function(response){
+				//alert()
+			},
+			error: function(){
+				//$(".loading_img_div").fadeOut("slow");
+			}
+		});
+	});
+</script>
+<div class="body-blur"></div>
+<header class="header-area" data-lenis-prevent="true">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-2 col-6">
+<div class="header-logo">
+<div class="logo-dropdown">
+<div class="logo-initial">
+<a href="/">
+<img alt="logo" class="" src="images/logo_images_0_1741009073948276932.svg"/> </a>
+<span class="logo-dropdown-btn">
+<img alt="logo-arrow.svg" border="0" class="" src="images/logo-arrow.svg"/> </span>
+</div>
+<div class="logo-list">
+<ul>
+<li>
+<a href="https://www.morgenlease.nl/" target="_blank">
+<img alt="Logo alt" class="" src="images/gallery_images_1_0_17518732111051489587.png"/> </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-10 col-6">
+<div class="header-right">
+<div class="header-menu">
+<ul>
+<li>
+<a href="/all-in-concept">All-in concept </a>
+</li>
+<li>
+<a href="/ons-werk">Ons werk </a>
+</li>
+<li>
+<a href="/integraties">Integraties </a>
+</li>
+<li>
+<a href="/lab">LAB® <strong class="nav-number">1</strong></a>
+</li>
+<li>
+<a href="/vacatures">Vacatures <strong class="nav-number">1</strong></a>
+</li>
+<li>
+<a href="/contact">Contact </a>
+</li>
+</ul>
+</div>
+<div class="header-other">
+<div class="header-language">
+<div class="language-initial notranslate"><b class="lang_class">NL</b>
+<span class="lang_img"></span>
+<span class="language-dropdown-btn">
+<img alt="logo-arrow.svg" border="0" class="" src="images/logo-arrow.svg"/> </span>
+</div>
+<ul>
+<li class="translation-links">
+<a class="notranslate" data-lang="German" data-val="de" href="#googtrans(nl|de)">DE										<img alt="flagde.png" border="0" class="" src="images/flag-de.png"/> </a>
+</li>
+<li class="translation-links">
+<a class="notranslate" data-lang="English" data-val="en" href="#googtrans(nl|en)">EN										<img alt="flagen.png" border="0" class="" src="images/flag-en.png"/> </a>
+</li>
+<li class="translation-links">
+<a class="notranslate" data-lang="French" data-val="fr" href="#googtrans(nl|fr)">FR										<img alt="flagfr.png" border="0" class="" src="images/flag-fr.png"/> </a>
+</li>
+<li class="translation-links">
+<a class="notranslate" data-lang="Chinese" data-val="zh-CN" href="#googtrans(nl|zh-CN)">ZH-CN										<img alt="flagzh-CN.png" border="0" class="" src="images/flag-zh-CN.png"/> </a>
+</li>
+<li class="translation-links">
+<a class="notranslate" data-lang="Dutch" data-val="nl" href="#googtrans(nl|nl)">NL										<img alt="flagnl.png" border="0" class="" src="images/flag-nl.png"/> </a>
+</li>
+<li class="translation-links">
+<a class="notranslate" data-lang="Arabic" data-val="ar" href="#googtrans(nl|ar)">AR										<img alt="flagar.png" border="0" class="" src="images/flag-ar.png"/> </a>
+</li>
+</ul>
+</div>
+<div class="header-btn">
+<a class="common-btn kennis-btn" href="javascript:void(0)">Plan kennismaking</a>
+</div>
+<div class="menu-bar d-lg-none">
+<div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mobile-menu">
+<ul>
+<li>
+<a href="/all-in-concept">All-in concept </a>
+</li>
+<li>
+<a href="/ons-werk">Ons werk </a>
+</li>
+<li>
+<a href="/lab">LAB® <strong class="nav-number">1</strong></a>
+</li>
+<li>
+<a href="/vacatures">Vacatures <strong class="nav-number">1</strong></a>
+</li>
+<li>
+<a href="/contact">Contact </a>
+</li>
+</ul>
+</div>
+</header>
+<div class="contact-social">
+<ul>
+<li>
+<a href="tel:310133030019">
+<img alt="b-call.svg" class="" src="images/b-call.svg"/> </a>
+</li>
+<li>
+<a href="mailto:advies@morgeninternet.nl">
+<img alt="b-mail.svg" class="" src="images/b-mail.svg"/> </a>
+</li>
+<li>
+<a class="wp" href="https://wa.me/+31618522389" target="_blank">
+<img alt="b-wp.svg" class="" src="images/b-wp.svg"/>Stel hier je vraag
+			</a>
+</li>
+</ul>
+</div>
+<script src="js/api.js"></script>
+<div class="plan-kennismaking-popup kennis-popup">
+<div class="plan-popup-progress"><span></span></div>
+<div class="plan-popup-content">
+<div class="plan-popup-header">
+<div class="plan-popup-logo">
+<a href="/">
+<img alt="logo" src="images/logo_images_0_1741009073948276932.svg"/> </a>
+</div>
+<div class="plan-popup-close">
+<img alt="plan-popup-close.svg" border="0" class="" src="images/plan-popup-close.svg"/> </div>
+</div>
+<div class="plan-popup-content-wrap" data-lenis-prevent="">
+<form accept-charset="utf-8" action="/pages/leads" id="leads_form" method="post"><div style="display:none;"><input name="_method" type="hidden" value="POST"/><input autocomplete="off" name="_csrfToken" type="hidden" value="e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"/></div> <input id="form_hidden" name="form_name" type="hidden" value="leads_form"/> <!-- Step 0 -->
+<div class="each-plan-popup-content step active">
+<h4>Dankjewel voor je interesse!</h4>
+<p>Om je zo goed mogelijk te kunnen helpen hebben we een aantal vragen voor je. Het beantwoorden hiervoor duurt ongeveer één minuutje. Wil jij hem ook invullen?</p>
+<p>Let op: Het beantwoorden van de vragen is nodig om je aanvraag compleet te maken.</p>
+<button class="common-btn next" type="button">Start aanvraag</button>
+</div>
+<!-- Step 1 -->
+<div class="each-plan-popup-content plan-popup-underline step">
+<h6>1. Heb je op dit moment een partij die je website beheert? <strong>*</strong></h6>
+<label>
+<input class="question_1" name="question_1" type="radio" value="Ja, maar ik sta altijd open om in gesprek te gaan met nieuwe bedrijven "/>
+<strong>Ja, maar ik sta altijd open om in gesprek te gaan met nieuwe bedrijven </strong>
+</label>
+<label>
+<input class="question_1" name="question_1" type="radio" value=" Ja, maar we zijn hier niet helemaal tevreden over "/>
+<strong> Ja, maar we zijn hier niet helemaal tevreden over </strong>
+</label>
+<label>
+<input class="question_1" name="question_1" type="radio" value=" Nee, niemand beheert mijn website"/>
+<strong> Nee, niemand beheert mijn website</strong>
+</label>
+<div class="error-message-1" style="color:red; margin-top:5px;">
+</div>
+<div class="plan-popup-btn">
+<button class="common-btn dark-btn prev" type="button">Terug</button>
+<button class="common-btn next" type="button">Volgende</button>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="each-plan-popup-content plan-popup-square step">
+<h6>2. Welke score zou je de vindbaarheid van je website op dit moment geven? <strong>*</strong></h6>
+<label>
+<input class="question_2" name="question_2" type="radio" value="1 "/>
+<strong>1 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 2 "/>
+<strong> 2 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 3 "/>
+<strong> 3 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 4 "/>
+<strong> 4 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 5 "/>
+<strong> 5 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 6 "/>
+<strong> 6 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 7 "/>
+<strong> 7 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 8 "/>
+<strong> 8 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 9 "/>
+<strong> 9 </strong>
+</label>
+<label>
+<input class="question_2" name="question_2" type="radio" value=" 10"/>
+<strong> 10</strong>
+</label>
+<div class="error-message-2" style="color:red; margin-top:5px;">
+</div>
+<div class="plan-popup-btn">
+<button class="common-btn dark-btn prev" type="button">Terug</button>
+<button class="common-btn next" type="button">Volgende</button>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="each-plan-popup-content plan-popup-square step">
+<h6>3. Welke score zou je het aantal website leads op dit moment geven? <strong>*</strong></h6>
+<label>
+<input class="question_3" name="question_3" type="radio" value="1 "/>
+<strong>1 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 2 "/>
+<strong> 2 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 3 "/>
+<strong> 3 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 4 "/>
+<strong> 4 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 5 "/>
+<strong> 5 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 6 "/>
+<strong> 6 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 7 "/>
+<strong> 7 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 8 "/>
+<strong> 8 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 9 "/>
+<strong> 9 </strong>
+</label>
+<label>
+<input class="question_3" name="question_3" type="radio" value=" 10"/>
+<strong> 10</strong>
+</label>
+<div class="error-message-3" style="color:red; margin-top:5px;">
+</div>
+<div class="plan-popup-btn">
+<button class="common-btn dark-btn prev" type="button">Terug</button>
+<button class="common-btn next" type="button">Volgende</button>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="each-plan-popup-content plan-popup-rect step">
+<h6>4. Wat zoek je in een website partner? <strong>*</strong></h6>
+<label>
+<input class="question_4" name="question_4[]" type="checkbox" value="Creatief meedenken "/>
+<strong>Creatief meedenken </strong>
+</label>
+<label>
+<input class="question_4" name="question_4[]" type="checkbox" value=" Duidelijke communicatie "/>
+<strong> Duidelijke communicatie </strong>
+</label>
+<label>
+<input class="question_4" name="question_4[]" type="checkbox" value=" Maximale ontzorging "/>
+<strong> Maximale ontzorging </strong>
+</label>
+<label>
+<input class="question_4" name="question_4[]" type="checkbox" value=" Hoge mate van innovatie "/>
+<strong> Hoge mate van innovatie </strong>
+</label>
+<label>
+<input class="question_4" name="question_4[]" type="checkbox" value=" Pro-activiteit "/>
+<strong> Pro-activiteit </strong>
+</label>
+<label>
+<input class="question_4" name="question_4[]" type="checkbox" value=" Branche kennis"/>
+<strong> Branche kennis</strong>
+</label>
+<div class="error-message-4" style="color:red; margin-top:5px;">
+</div>
+<div class="plan-popup-btn">
+<button class="common-btn dark-btn prev" type="button">Terug</button>
+<button class="common-btn next" type="button">Volgende</button>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="each-plan-popup-content plan-popup-square step">
+<h6>5. Hoelang bestaat je bedrijf al? <strong>*</strong></h6>
+<label>
+<input class="question_5" name="question_5" type="radio" value="Ik zit nog in de oprichtfase "/>
+<strong>Ik zit nog in de oprichtfase </strong>
+</label>
+<label>
+<input class="question_5" name="question_5" type="radio" value=" 0 - 5 jaar "/>
+<strong> 0 - 5 jaar </strong>
+</label>
+<label>
+<input class="question_5" name="question_5" type="radio" value=" 5+ jaar"/>
+<strong> 5+ jaar</strong>
+</label>
+<div class="error-message-5" style="color:red; margin-top:5px;">
+</div>
+<div class="plan-popup-btn">
+<button class="common-btn dark-btn prev" type="button">Terug</button>
+<button class="common-btn next" type="button">Volgende</button>
+</div>
+</div>
+<!-- Step 6 -->
+<div class="each-plan-popup-content plan-popup-square step">
+<h6>6. Wanneer we kunnen laten zien hoe we het aantal leads via je website kunnen verhogen, sta je dan open voor een nieuwe website? <strong>*</strong></h6>
+<label>
+<input class="question_6" name="question_6" type="radio" value="Ja "/>
+<strong>Ja </strong>
+</label>
+<label>
+<input class="question_6" name="question_6" type="radio" value=" Nee"/>
+<strong> Nee</strong>
+</label>
+<div class="error-message-6" style="color:red; margin-top:5px;">
+</div>
+<div class="plan-popup-btn">
+<button class="common-btn dark-btn prev" type="button">Terug</button>
+<button class="common-btn next" type="button">Volgende</button>
+</div>
+</div>
+<!-- Step 7 -->
+<div class="each-plan-popup-content plan-popup-textbox step">
+<h6>7. Wat zijn je contactgegevens? <strong>*</strong></h6>
+<div class="form-wrap">
+<div class="form-group">
+<label>Telefoonnummer*</label>
+<input class="form-style telefoonnummer" data-errormessage-value-missing="Telefoonnummer is verplicht" id="telefoonnummer" name="telefoonnummer" placeholder="" type="text"/> <div class="error-message-telefoonnummer" style="color:red; margin-top:5px;">
+</div>
+</div>
+<div class="form-group">
+<label>E-mailadres*</label>
+<input class="form-style e-mailadres" data-errormessage-value-missing="E-mailadres is verplicht" id="e-mailadres" name="e-mailadres" placeholder="" type="text"/>
+<div class="error-message-mailadres" style="color:red; margin-top:5px;">
+</div>
+</div>
+</div>
+<div class="plan-popup-btn">
+<button class="common-btn dark-btn prev" type="button">Terug</button>
+<button class="common-btn next" type="button">Volgende</button>
+</div>
+</div>
+<!-- Step 8 -->
+<div class="each-plan-popup-content plan-popup-selectbox step">
+<h6>8.Tot slot, hoe heb je ons gevonden? *<strong>*</strong></h6>
+<select class="select-style question_8" name="question_8">
+<option value="Maak een keuze ">Maak een keuze </option>
+<option value=" Via een Morgen Internet klant "> Via een Morgen Internet klant </option>
+<option value="Telefonisch benaderd door jullie ">Telefonisch benaderd door jullie </option>
+<option value="Google ">Google </option>
+<option value="Online campagne ">Online campagne </option>
+<option value="Morgen Lease ">Morgen Lease </option>
+<option value="Per e-mail benaderd door jullie ">Per e-mail benaderd door jullie </option>
+<option value="Overigen">Overigen</option>
+</select>
+<div class="error-message-8" style="color:red; margin-top:5px;">
+</div>
+<div class="plan-popup-btn">
+<button class="common-btn dark-btn prev" type="button">Terug</button>
+<button class="final_btn common-btn" type="button">Verzenden</button>
+</div>
+<div class="plan-popup-inspiration plan-popup-rect">
+<label>
+<input checked="" id="inspiration" name="inspiration" type="checkbox" value="check"/>
+<strong>Ik ontvang graag jullie nieuwste websites ter inspiratie.</strong>
+</label>
+</div>
+</div>
+<input name="no_value" type="hidden" value=""> <input id="token2" name="g-recaptcha-response" type="hidden" value=""/> <div style="display:none;"><input autocomplete="off" name="_Token[fields]" type="hidden" value="e349cd9a2afb8df6a10a6de87a398ca55d7f0a0e%3Aform_name"/><input autocomplete="off" name="_Token[unlocked]" type="hidden" value="g-recaptcha-response%7Cinspiration%7Cno_value%7Cquestion_1%7Cquestion_2%7Cquestion_3%7Cquestion_4%7Cquestion_5%7Cquestion_6%7Cquestion_8"/></div></input></form>
+<div class="plan-popup-member">
+<h6>Team <strong>Morgen Internet</strong> staat je graag <br/>te woord.</h6>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="each-popup-member">
+<img alt="Image 1" class="w-100" src="images/gallery_images_12_0_17502341501852685245.jpg"/> </div>
+</div>
+<div class="swiper-slide">
+<div class="each-popup-member">
+<img alt="Image 2" class="w-100" src="images/gallery_images_12_1_1750234150822742473.jpg"/> </div>
+</div>
+<div class="swiper-slide">
+<div class="each-popup-member">
+<img alt="Image 3" class="w-100" src="images/gallery_images_12_2_1761748708986666693.jpg"/> </div>
+</div>
+<div class="swiper-slide">
+<div class="each-popup-member">
+<img alt="Image 4" class="w-100" src="images/gallery_images_12_3_17617486711432131438.jpg"/> </div>
+</div>
+<div class="swiper-slide">
+<div class="each-popup-member">
+<img alt="Gallery Image 4" class="w-100" src="images/gallery_images_12_4_176174857752024266.jpg"/> </div>
+</div>
+<div class="swiper-slide">
+<div class="each-popup-member">
+<img alt="Gallery Image 5" class="w-100" src="images/gallery_images_12_5_17506595492054196845.png"/> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    $(function () {
+        var steps = $(".step").hide();
+        var i = 0;
+        const show = () => steps.hide().eq(i).show();
+        $(".next").click(function() {
+            $(steps[i]).find(".error-message").remove();
+            if (i != 0 && i != 7) {
+                let questionName = 'question_' + i;
+                if ($("input[name='" + questionName + "']:checked").length === 0 &&
+                    $("input[name='" + questionName + "[]']:checked").length === 0) {
+                    // Map step to error message element
+                    let errorMessageMap = {
+                        'question_1': '.error-message-1',
+                        'question_2': '.error-message-2',
+                        'question_3': '.error-message-3',
+                        'question_4': '.error-message-4',
+                        'question_5': '.error-message-5',
+                        'question_6': '.error-message-6'
+                    };
+                    // Show error message if applicable
+                    if (errorMessageMap[questionName]) {
+                        $(errorMessageMap[questionName]).html("Selecteer een waarde");
+                    }
+                    return; // Stop advancing
+                }
+            } else if (i == 7) {
+                let valid = true;
+                let telefoonnummer = $(".telefoonnummer");
+                if (!telefoonnummer.val().trim()) {
+                    $(".error-message-telefoonnummer").html("Telefoonnummer is verplicht");
+                    valid = false;
+                }
+                let email = $(".e-mailadres");
+                if (!email.val().trim()) {
+                    $(".error-message-mailadres").html("E-mailadres is verplicht");
+                    valid = false;
+                } else {
+                    let emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+                    if (!emailPattern.test(email.val().trim())) {
+                        $(".error-message-mailadres").html("Ongeldig e-mailadres");
+                        valid = false;
+                    }
+                }
+                if (!valid) return;
+            }
+            // Go to next step
+            if (i < steps.length - 1) i++;
+            show();
+
+            var length = (i * 10) + 20;
+            $(".plan-popup-progress span").css("width", length + "%");
+
+            $(".question_" + i).on("change", function () {
+                $(".error-message-" + i).html("");
+            });
+        });
+
+        $(".prev").click(function() {
+            $(steps[i]).find(".error-message").remove();
+            if (i > 0) i--;
+            show();
+
+            var length = (i * 10) + 20;
+            $(".plan-popup-progress span").css("width", length + "%");
+        });
+
+        $("#telefoonnummer").on("change", function () {
+           $(".error-message-telefoonnummer").html("");
+       
+        });
+         $("#e-mailadres").on("change", function () {
+           $(".error-message-mailadres").html("");
+          
+        });
+
+        $(".final_btn").click(function() {  
+            var q8 = $(".question_8").val().trim();
+
+            if (q8== '' || q8 =='Search for a location') {
+               $(".error-message-8").html("Selecteer een waarde");
+            }else{
+                $(".error-message-8").html("");
+                
+                $("#leads_form").validationEngine();
+                // $("#leads_form").submit(function(){
+                    if($("#leads_form").validationEngine("validate") == true)
+                    {
+                        if($('#token2').val()=='')
+                        {
+                            grecaptcha.ready(function() {
+                                grecaptcha.execute('6LdnRb0kAAAAAKPB-LwupEZ5UKokm8TZDALoaxUJ', {action: 'leads_form'})
+                                .then(function(token) {
+                                // Verify the token on the server.
+                                    $('#loader_section').show();
+                                    $('#token2').val(token);
+                                    $("#leads_form")[0].submit();
+                                });
+                            });
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                // });
+            }
+        });
+        show();
+        $(".plan-popup-progress span").css("width", "20%");
+    });
+</script><section class="text-center" id="loader_section">
+<img alt="loder_img" border="0" class="" src="images/loder_img.gif"/> <p>Een moment geduld, uw verzoek wordt verwerkt.</p>
+</section>
+<script type="text/javascript">
+<!--
+	$(function(){
+		$.ajax({
+			type:"POST",
+			dataType: 'json',
+			url:"/pages/generate-sitemap",
+			beforeSend: function(){
+				//$(".loading_img_div").fadeIn("slow");
+			},
+			headers : {
+				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
+			},
+			success: function(response){
+				//alert()
+			},
+			error: function(){
+				//$(".loading_img_div").fadeOut("slow");
+			}
+		});
+	});
+//-->
+</script>
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			type:"POST",
+			dataType: 'json',
+			url:"/labs/generate-lab-product-xml",
+			beforeSend: function(){
+				//$(".loading_img_div").fadeIn("slow");
+			},
+			headers : {
+				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
+			},
+			success: function(response){
+				//alert()
+			},
+			error: function(){
+				//$(".loading_img_div").fadeOut("slow");
+			}
+		});
+	});
+</script> <!--==========================header area end===================-->
+<!--==========================main area===================-->
+<main>
+<section class="price-sec morgen-footer-price-sec sec-1 default-subscription">
+<div class="price-bg">
+<img alt="1742232883Header Image 0" border="0" class="w-100" src="images/1742232883header_images_0_1742226580522489407.jpg"/> </div>
+<div class="container">
+<div class="price-wrap block-wrap">
+<div class="price-heading text-reveal text-center">
+<h2>Vond je de vorige website interessant?</h2>
+<h6>Je bekeek net een MorgenZorgeloos Light® website!</h6>
+</div>
+<div class="price-main">
+<div class="row">
+<div class="col-lg-6">
+<div class="each-price">
+<h4>MorgenZorgeloos <strong>Light</strong>®</h4>
+<h6><strong>V.a. € 119,- p.m.</strong> (incl. webhosting)</h6>
+<ul>
+<li>Topdesign in NL</li>
+<li>Periodiek 1 op 1 advies</li>
+<li>Full-service onderhoud</li>
+<li>Technische Google optimalisatie</li>
+<li>Continu vernieuwen met LAB®</li>
+</ul>
+<a class="common-btn light dark-btn plan-btn kennis-btn" href="javascript:void(0)">Plan kennismaking</a> </div>
+</div>
+<div class="col-lg-6">
+<div class="each-price">
+<h4>MorgenZorgeloos®</h4>
+<h6><strong>V.a. € 174,- p.m.</strong> (incl. webhosting)</h6>
+<ul>
+<li>Topdesign maatwerk in NL</li>
+<li>Jaarlijks 1 op 1 advies</li>
+<li>Full-service onderhoud</li>
+<li>Technische Google optimalisatie</li>
+<li>Continu vernieuwen met LAB®</li>
+</ul>
+<a class="common-btn dark-btn zorgeloos plan-btn kennis-btn" href="javascript:void(0)">Plan kennismaking</a> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="our-work-sec">
+<div class="container">
+<div class="our-work-heading text-reveal">
+<h4>Nog niet overtuigd?</h4>
+<h2>Bekijk meer van ons werk</h2>
+<p>Bij ons abonnement <strong>MorgenZorgeloos Light®</strong> krijg je een topdesign, full-service onderhoud en continue vernieuwing. Hieronder een impressie van de klanten die je voor gingen.</p>
+</div>
+<div class="our-work-main">
+<div class="our-work-visible">
+<div class="row">
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/lsn-lease">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1756810517525332077.jpg" border="0" class="w-100" src="images/content_image_1756810517525332077.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">LSN Lease</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/kc-automotive">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1698873596602487571.jpg" border="0" class="w-100" src="images/content_image_1698873596602487571.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">KC Automotive</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/auto-swaanen">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1604060500929374298.jpg" border="0" class="w-100" src="images/content_image_1604060500929374298.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Auto Swaanen</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/deluxe-automotive">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_16040609271729208031.jpg" border="0" class="w-100" src="images/content_image_16040609271729208031.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Deluxe Automotive</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/e-s-automotive">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_16040615411952840763.jpg" border="0" class="w-100" src="images/content_image_16040615411952840763.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">E&amp;S Automotive</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/maas-auto-s">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_16040638362146392548.jpg" border="0" class="w-100" src="images/content_image_16040638362146392548.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Maas Auto's</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/always-better-cars">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_16040644471545410704.jpg" border="0" class="w-100" src="images/content_image_16040644471545410704.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Always Better Cars</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/gerard-vulink">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_16040649481310508433.jpg" border="0" class="w-100" src="images/content_image_16040649481310508433.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Gerard Vulink</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/dekrie-auto-s">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_16045813611804920451.jpg" border="0" class="w-100" src="images/content_image_16045813611804920451.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Dekrie Auto's</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="our-work-hidden">
+<div class="our-work-hidden-text text-reveal text-center">
+<h2><strong>666+</strong> autobedrijven waren je voor!</h2>
+<a class="common-btn blue-to-dark" href="contact">Plan een gratis kennismaking</a> </div>
+<div class="row">
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/nancy-jurgen-auto-s">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1604066130862076152.jpg" border="0" class="w-100" src="images/content_image_1604066130862076152.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Nancy Jurgen Auto's</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/auto-breedeijk">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1604066812917184107.jpg" border="0" class="w-100" src="images/content_image_1604066812917184107.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Auto Breedeijk</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/gs-automotive">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_16045820651313034477.jpg" border="0" class="w-100" src="images/content_image_16045820651313034477.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">GS Automotive</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/autocentrum-van-doorn">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1604582131728412558.jpg" border="0" class="w-100" src="images/content_image_1604582131728412558.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Autocentrum van Doorn</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/hamilton-automobielen">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_16040684161718566340.jpg" border="0" class="w-100" src="images/content_image_16040684161718566340.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Hamilton Automobielen</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/versteegh-automotive">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1604069346976224591.jpg" border="0" class="w-100" src="images/content_image_1604069346976224591.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Versteegh Automotive</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/van-de-velde-auto-s">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1604069765636823865.jpg" border="0" class="w-100" src="images/content_image_1604069765636823865.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Van de Velde Auto's</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/van-zuijlen-auto-s">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1604070106838978346.jpg" border="0" class="w-100" src="images/content_image_1604070106838978346.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">Van Zuijlen Auto's</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-6">
+<a href="/ons-werk-details/v-w-auto-s">
+<div class="each-work">
+<div class="each-work-img">
+<img alt="content_image_1604582273167971410.jpg" border="0" class="w-100" src="images/content_image_1604582273167971410.jpg"/> </div>
+<div class="each-work-text">
+<div class="common-btn">V&amp;W Auto's</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="partner-sec-sec">
+<div class="container">
+<div class="partner-sec-outer">
+<div class="partner-sec-wrap">
+<ul>
+<li>
+<img alt="Gallery Image 0" class="" src="images/gallery_images_2_0_1750188891684236983.png"/> </li>
+<li>
+<img alt="Gallery Image 1" class="" src="images/gallery_images_2_1_17501891151628352496.svg"/> </li>
+<li>
+<img alt="Gallery Image 2" class="" src="images/gallery_images_2_2_17507641331147411686.svg"/> </li>
+<li>
+<img alt="Gallery Image 3" class="" src="images/gallery_images_2_3_1750189424346860100.svg"/> </li>
+<li>
+<img alt="Gallery Image 4" class="" src="images/gallery_images_2_4_1750189371109297002.svg"/> </li>
+<li>
+<img alt="Gallery Image 5" class="" src="images/gallery_images_2_5_17501895261295457781.svg"/> </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!--==========================main area end===================-->
+<!--==========================footer area end===================-->
+<footer class="footer-area">
+<div class="container">
+<div class="footer-wrap">
+<div class="footer-top">
+<div class="row">
+<div class="col-lg-3">
+<div class="footer-logo">
+<h6>MorgenGroep</h6>
+<div class="footer-logo-set">
+<div class="each-footer-logo">
+<a href="https://www.morgenlease.nl/" target="_blank">
+<img alt="Logo alt" class="" src="images/gallery_images_1_0_17518732111051489587.png"/> </a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-9">
+<div class="footer-info">
+<div class="each-footer-info">
+<h6>Menu</h6>
+<ul>
+<li>
+<a href="/all-in-concept">All-in concept</a>
+</li>
+<li>
+<a href="/ons-werk">Ons werk</a>
+</li>
+<li>
+<a href="/lab">LAB®</a>
+</li>
+<li>
+<a href="/vacatures">Vacatures</a>
+</li>
+<li>
+<a href="/contact">Contact</a>
+</li>
+</ul>
+</div>
+<div class="each-footer-info">
+<h6>Contact</h6>
+<p>
+<a href="https://www.google.com/maps/place/Morgen+Internet+B.V./@51.5349826,5.0429721,17z/data=!3m1!4b1!4m6!3m5!1s0x47c6be773dc3c421:0xbfda5aecc7b7fd9a!8m2!3d51.5349794!4d5.047843!16s%2Fg%2F1tdzksp2?entry=ttu" target="_blank">Technopol 29<br>5026 SB Tilburg									</br></a>
+</p>
+<p>
+<a href="tel:310133030019">
+										+31(0)13 303 00 19										
+									</a>
+</p>
+<p>
+<a href="mailto:advies@morgeninternet.nl">advies@morgeninternet.nl									</a>
+</p>
+</div>
+<div class="each-footer-info footer-social">
+<h6>Volg ons op Social Media</h6>
+<ul>
+<li>
+<a href="https://www.instagram.com/morgeninternet/" target="_blank">
+<img alt="social1.svg" class="" src="images/social1.svg"/> </a>
+</li>
+<li>
+<a href="https://www.facebook.com/morgeninternet" target="_blank">
+<img alt="social2.svg" class="" src="images/social2.svg"/> </a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/morgen-internet" target="_blank">
+<img alt="social3.svg" class="" src="images/social3.svg"/> </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-mark">
+<a href="/">
+<img alt="" class="w-100" src="images/website_other_image_1747206334884737058.png"/> </a>
+</div>
+<div class="footer-btm">
+<div class="row align-items-center">
+<div class="col-6">
+<div class="footer-copyright">
+<p>© 2025 Morgen Internet. Alle rechten voorbehouden.</p>
+</div>
+</div>
+<div class="col-6">
+<div class="footer-privacy">
+<ul>
+<li><a href="/privacy">Privacybeleid</a></li>
+<li><a href="NLdigital Voorwaarden.pdf">Algemene voorwaarden</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script type="text/javascript">
+	$(document).ready(function() {
+	    const replacements = {
+	        "[company_name]": "Morgen Internet B.V.",
+	        "[email]": "advies@morgeninternet.nl",
+	        "[city]": "Tilburg",
+	        "[phone_number]": "+31(0)13 303 00 19",
+	        "[whatsapp_number]": "+31618522389",
+	        "[address]": "Technopol 29",
+	        "[postal_code]": "5026 SB"
+	    };
+	    // Function to replace placeholders in text nodes
+	    function replaceTextNodes(node) {
+	        if (node.nodeType === Node.TEXT_NODE) {
+	            let text = node.nodeValue;
+	            $.each(replacements, function(key, value) {
+	                text = text.replaceAll(key, value);
+	            });
+	            node.nodeValue = text;
+	        } else {
+	            $(node).contents().each(function() {
+	                replaceTextNodes(this);
+	            });
+	        }
+	    }
+
+	    // Start replacing placeholders from the body
+	    replaceTextNodes(document.body);
+	});
+</script>
+<div id="mobile-contact-bar">
+<div id="mobile-contact-bar-outer">
+<ul>
+<li>
+<a href="tel:310133030019">
+<img alt="phone.svg" border="0" class="" src="images/phone.svg"/> </a>
+</li>
+<li class="li_color">
+<a href="mailto:advies@morgeninternet.nl">
+<img alt="mail.svg" border="0" class="" src="images/mail.svg"/> </a>
+</li>
+<li class="li_color">
+<a href="https://www.google.com/maps/place/Morgen+Internet+B.V./@51.5349826,5.0429721,17z/data=!3m1!4b1!4m6!3m5!1s0x47c6be773dc3c421:0xbfda5aecc7b7fd9a!8m2!3d51.5349794!4d5.047843!16s%2Fg%2F1tdzksp2?entry=ttu" target="_blank">
+<img alt="pin.svg" border="0" class="" src="images/pin.svg"/> </a>
+</li>
+<li class="li_color" style="background-color: #25D366;">
+<a href="https://wa.me/+31618522389" target="_blank">
+<img alt="whatsapp.svg" border="0" class="" src="images/whatsapp.svg"/> </a>
+</li>
+</ul>
+</div>
+</div>
+<a class="morgeninternet-footer add_morgan_footer_margin" href="https://morgeninternet.nl/pages/menu/zorgeloos-footer?url=morgeninternet.nl" target="_BLANK"><img alt="Morgen Internet - Zorgeloos website" src="images/zorgeloos-light.png"/></a>
+<!--==========================footer area end===================-->
+<!--==========================Popup area===================-->
+<!--==========================Popup area end===================-->
+<!--==========================Cookie area ===================-->
+<link href="css/cookie_style.css" rel="stylesheet"/>
+<form accept-charset="utf-8" action="/pages/cookie_accept" id="cookie_form" method="post"><div style="display:none;"><input name="_method" type="hidden" value="POST"/><input autocomplete="off" name="_csrfToken" type="hidden" value="e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"/></div><input id="form-name" name="form_name" type="hidden" value="cookie_form"/><div class="cookie light-theme position-fixed w-100 pt-md-5 cmn-cookie-info" id="cookiediv">
+<div class="pt-4 px-5 pb-4 mb-2 mt-3">
+<h6>We gebruiken cookies, wil je dat?</h6>
+<p>Cookies zijn kleine tekstbestanden met informatie erin.
+Die plaatsen we kort op je apparaat. Zo zien we bijvoorbeeld welke pagina’s je
+zag, waar je afhaakte en wat je invulde. Op die manier hebben wij informatie
+waar we jouw websitebezoek beter mee maken. Handig toch? Natuurlijk kies je
+zelf of je dat toestaat. Daar zijn we eerlijk over. Klik op “Cookie
+instellingen”, vind meer informatie en beheer je voorkeuren. </p>
+<ul>
+<li>
+<a class="cookie-settings" href="javascript:void(0)">Cookie instellingen</a>
+</li>
+<li>
+<button class="border-0 bg-transparent p-0" type="submit">Cookies weigeren</button> </li>
+</ul>
+</div>
+<button class="cookie-btn border-0 w-100 mt-2 all_cookie_accept" type="button">Ga akkoord</button>
+<div class="cookie-close text-center position-absolute align-items-center justify-content-center d-flex close-f">
+<img alt="cross.svg" border="0" class="" src="images/cross.svg"> </img></div>
+</div>
+<div class="cookie-content position-fixed w-100 light-theme cmn-cookie-info pt-5 d-none">
+<div class="px-5">
+<h6>Cookie instellingen</h6>
+</div>
+<div class="cookie-close text-center position-absolute align-items-center justify-content-center d-flex close-f">
+<img alt="cross.svg" border="0" class="" src="images/cross.svg"/> </div>
+<div class="cookie-content-wrap px-5">
+<p>We
+gebruiken cookies om u een betere browse-ervaring te bieden, siteverkeer te
+analyseren, inhoud te personaliseren en gerichte advertenties te tonen. Klik op
+de verschillende catogorieknoppen voor meer informatie. U kunt ook uw
+cookievoorkeuren wijzigen. Houd er rekening mee dat het blokkeren van bepaalde
+soorten cookies van invloed kan zijn op uw ervaring op onze website en de
+diensten die we kunnen aanbieden. </p>
+<ul>
+<li>
+<a href="/privacy">Privacy verklaring</a>
+</li>
+<li>
+<button class="weigeren-btn border-0 bg-transparent p-0" type="submit">Cookies weigeren</button> </li>
+</ul>
+<div class="accordion" id="accordionExample">
+<div class="each-cookie-info info2">
+<div class="d-flex justify-content-between align-items-center">
+<div class="collapsed position-relative" data-bs-target="#content0" data-bs-toggle="collapse">
+						Essentiële cookies					</div>
+<label class="switch">
+<!-- <input type="checkbox" checked> -->
+<input name="cookie_status[]" type="hidden" value="0"/><input checked="checked" class="check_cls" id="cookie-status" name="cookie_status[]" type="checkbox" value="Essentiële cookies"/> <span class="cookie-slider-round round"></span>
+</label>
+</div>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="content0">
+<p>Deze cookies zijn strikt noodzakelijk om u de services te bieden die beschikbaar zijn via onze websites en om sommige functies ervan te gebruiken. Omdat deze cookies strikt noodzakelijk zijn om de website te kunnen leveren, kunt u ze niet weigeren zonder dat dit invloed heeft op de werking van onze website</p>
+</div>
+</div>
+<div class="each-cookie-info">
+<div class="d-flex justify-content-between align-items-center">
+<div class="collapsed position-relative" data-bs-target="#content1" data-bs-toggle="collapse">
+						Functionele cookies					</div>
+<label class="switch">
+<!-- <input type="checkbox" checked> -->
+<input name="cookie_status[]" type="hidden" value="0"><input checked="checked" class="check_cls" id="cookie-status" name="cookie_status[]" type="checkbox" value="Functionele cookies"/> <span class="cookie-slider-round round"></span>
+</input></label>
+</div>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="content1">
+<p>Deze cookies worden gebruikt om de prestaties en functionaliteit van de website te verbeteren, maar zijn niet essentieel voor het gebruik ervan. Zonder deze cookies is het echter mogelijk dat bepaalde functionaliteiten niet beschikbaar zijn.</p>
+</div>
+</div>
+<div class="each-cookie-info">
+<div class="d-flex justify-content-between align-items-center">
+<div class="collapsed position-relative" data-bs-target="#content2" data-bs-toggle="collapse">
+						Analytische cookies					</div>
+<label class="switch">
+<!-- <input type="checkbox" checked> -->
+<input name="cookie_status[]" type="hidden" value="0"><input checked="checked" class="check_cls" id="cookie-status" name="cookie_status[]" type="checkbox" value="Analytische cookies"/> <span class="cookie-slider-round round"></span>
+</input></label>
+</div>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="content2">
+<p>Deze cookies verzamelen informatie die ofwel in geaggregeerde vorm wordt gebruikt om ons te helpen begrijpen hoe onze websites worden gebruikt of om ons te helpen onze website voor u aan te passen om uw ervaring te verbeteren.</p>
+</div>
+</div>
+<div class="each-cookie-info">
+<div class="d-flex justify-content-between align-items-center">
+<div class="collapsed position-relative" data-bs-target="#content3" data-bs-toggle="collapse">
+						Advertentie cookies					</div>
+<label class="switch">
+<!-- <input type="checkbox" checked> -->
+<input name="cookie_status[]" type="hidden" value="0"><input checked="checked" class="check_cls" id="cookie-status" name="cookie_status[]" type="checkbox" value="Advertentie cookies"/> <span class="cookie-slider-round round"></span>
+</input></label>
+</div>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="content3">
+<p>Deze cookies worden gebruikt om advertenties relevanter te maken voor u. Ze voorkomen dat dezelfde advertentie voortdurend opnieuw getoond wordt en zorgen ervoor dat advertenties correct worden weergegeven. In sommige gevallen zorgen deze cookies ervoor dat advertenties getoond worden op basis van uw interesses.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="row no-gutters">
+<div class="col-md-6">
+<button class="cookie-btn gray-btn border-0 rounded-0 w-100" id="few_cookie_accept" type="button">Instellingen opslaan</button>
+</div>
+<div class="col-md-6">
+<button class="cookie-btn border-0 rounded-0 w-100 all_cookie_accept" type="button">Accepteer alle cookies</button>
+</div>
+</div>
+</div>
+<div style="display:none;"><input autocomplete="off" name="_Token[fields]" type="hidden" value="80d211d27e94d0a0a4886ddd3f6b0d3127bcc607%3Aform_name"><input autocomplete="off" name="_Token[unlocked]" type="hidden" value=""/></input></div></form><script>
+	$(document) .ready(function(){
+		$('.cookie-settings').click(function(){
+			$('.cookie-content').removeClass('d-none')
+			$('.cookie').hide()
+		});
+		$('.cookie .cookie-close').click(function(){
+			localStorage.setItem("close_f", "Y");
+			$('.cookie').hide();
+
+			if(localStorage.getItem("close_f") == "Y"){
+				setTimeout(() => {
+				$('.cookie').show();
+					//localStorage.setItem("close_f", "N");
+					localStorage.clear();
+				}, 300000);
+			}
+		});
+		$('.cookie-content .cookie-close').click(function(){
+			$('.cookie-content').hide();
+			localStorage.setItem("close_f", "Y");
+			if(localStorage.getItem("close_f") == "Y"){
+				setTimeout(() => {
+				$('.cookie').show();
+				$('.cookie-content').removeAttr('style');
+				$('.cookie-content').addClass('d-none');
+					//localStorage.setItem("close_f", "N");
+					localStorage.clear();
+				}, 300000);
+			}
+		});
+		$('#few_cookie_accept').click(function(){
+			$('#cookie_form').submit();
+		})
+		$('.all_cookie_accept').click(function(){
+			$('.check_cls').prop('checked', true);
+			$('#cookie_form').submit();
+		})
+	})
+</script>
+<!--==========================Cookie area end===================-->
+</div>
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/SplitText.js"></script>
+<script src="js/lenis.min.js"></script>
+<script src="js/turn.js"></script>
+<script src="js/custom.js"></script>
+<script type="text/javascript">
+	<!--
+		$(function(){
+			$(".no_cut_copy_paste").on("cut copy paste",function(e) {
+				e.preventDefault();
+			});
+		})
+		showCustomMessage('');
+	//-->
+	</script>
+</body>
+</html>
