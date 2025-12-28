@@ -33,12 +33,18 @@
 <script src="js/fancybox.umd.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async="" src="js/js.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JSZ6FHHK8C');
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'G-JSZ6FHHK8C');
+
 </script><!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -61,127 +67,245 @@ fbq('track', 'PageView');
 <!--==========================header area===================-->
 <!-- Code provided by Google -->
 <div id="google_translate_element"></div>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'nl', autoDisplay: false}, 'google_translate_element'); //remove the layout
-  }
+<script type="text/javascript">
+
+  function googleTranslateElementInit() {
+
+	new google.translate.TranslateElement({pageLanguage: 'nl', autoDisplay: false}, 'google_translate_element'); //remove the layout
+
+  }
+
 </script>
 <script src="js/element.js" type="text/javascript"></script>
-<script type="text/javascript">
-	if(sessionStorage.getItem('lenis_scroll'))
-	{
-		sessionStorage.removeItem('lenis_scroll');
-	}
-	sessionStorage.setItem('lenis_scroll', 1);
-	
-	
-	/*function triggerHtmlEvent(element, eventName) {
-		var event;
-		if(document.createEvent) {
-			event = document.createEvent('HTMLEvents');
-			event.initEvent(eventName, true, true);
-			element.dispatchEvent(event);
-		} else {
-			event = document.createEventObject();
-			event.eventType = eventName;
-			element.fireEvent('on' + event.eventType, event);
-		}
-	}*/
-	$(window).on("load", function(){
-		var hash = window.location.hash;
-		if(hash != "")
-		{
-			//Do nothing
-		}
-		else
-		{
-			var lang_to = $.inArray($('html')[0].lang, ["nl", "de", "en", "fr", "ar", "zh-CN"]) > -1 ? $('html')[0].lang : "nl";
-			hash = "#googtrans(nl|"+lang_to+")";
-		}
-		console.log(hash);
-		$('.translation-links a').removeClass("active_flag");
-		$('.translation-links a[href="'+hash+'"]').addClass("active_flag");
-		$('.lang_class').text($('.translation-links a[href="'+hash+'"]').attr('data-val').toUpperCase());
-		var act_flag = $(".active_flag").data("val");
-		var basePath = "/";
-		let imgSrc = basePath+'images/flags/flag-'+act_flag+'.png';
-
-		// Update or add the image
-		$('.lang_img').html('<img src="'+imgSrc+' "alt="'+imgSrc+'"/>');
-
-
-	});
-	$(function(){
-		<!-- Flag click handler -->
-		$('.translation-links a').click(function(e) {
-			/*e.preventDefault();
-			$('.translation-links a').removeClass("active_flag");
-			$(this).addClass("active_flag");
-			var lang = $(this).data('lang');
-			$('#google_translate_element select option').each(function(){
-				if($(this).text().indexOf(lang) > -1) {
-					$(this).parent().val($(this).val());
-					var container = document.getElementById('google_translate_element');
-					var select = container.getElementsByTagName('select')[0];
-					triggerHtmlEvent(select, 'change');
-				}
-			});*/
-			if($(this).attr('href') == "#googtrans(nl|nl)")
-			{
-				/*var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
-				if(!iframe) return;
-				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-				var restore_el = innerDoc.getElementsByTagName("button");
-
-				for(var i = 0; i < restore_el.length; i++){
-					if(restore_el[i].id.indexOf("restore") >= 0) {
-						restore_el[i].click();
-						var close_el = innerDoc.getElementsByClassName("goog-close-link");
-						close_el[0].click();
-					}
-				}*/
-				/*var iframe = document.getElementsByTagName('iframe')[0];
-				if(!iframe) return;
-				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-				var restore_el = innerDoc.getElementsByTagName("button");
-				for(var i = 0; i < restore_el.length; i++){
-					if(restore_el[i].id.indexOf("restore") >= 0) {
-						restore_el[i].click();
-					}
-				}
-				var cancel_el = innerDoc.getElementsByTagName("a");
-
-				for(var i = 0; i < cancel_el.length; i++){
-					if(cancel_el[i].id.indexOf("close") >= 0) {
-						cancel_el[i].click();
-					}
-				}*/
-			}
-			window.location = $(this).attr('href');
-			location.reload();
-		});
-	});
+<script type="text/javascript">
+
+	if(sessionStorage.getItem('lenis_scroll'))
+
+	{
+
+		sessionStorage.removeItem('lenis_scroll');
+
+	}
+
+	sessionStorage.setItem('lenis_scroll', 1);
+
+	
+
+	
+
+	/*function triggerHtmlEvent(element, eventName) {
+
+		var event;
+
+		if(document.createEvent) {
+
+			event = document.createEvent('HTMLEvents');
+
+			event.initEvent(eventName, true, true);
+
+			element.dispatchEvent(event);
+
+		} else {
+
+			event = document.createEventObject();
+
+			event.eventType = eventName;
+
+			element.fireEvent('on' + event.eventType, event);
+
+		}
+
+	}*/
+
+	$(window).on("load", function(){
+
+		var hash = window.location.hash;
+
+		if(hash != "")
+
+		{
+
+			//Do nothing
+
+		}
+
+		else
+
+		{
+
+			var lang_to = $.inArray($('html')[0].lang, ["nl", "de", "en", "fr", "ar", "zh-CN"]) > -1 ? $('html')[0].lang : "nl";
+
+			hash = "#googtrans(nl|"+lang_to+")";
+
+		}
+
+		console.log(hash);
+
+		$('.translation-links a').removeClass("active_flag");
+
+		$('.translation-links a[href="'+hash+'"]').addClass("active_flag");
+
+		$('.lang_class').text($('.translation-links a[href="'+hash+'"]').attr('data-val').toUpperCase());
+
+		var act_flag = $(".active_flag").data("val");
+
+		var basePath = "/";
+
+		let imgSrc = basePath+'images/flags/flag-'+act_flag+'.png';
+
+
+
+		// Update or add the image
+
+		$('.lang_img').html('<img src="'+imgSrc+' "alt="'+imgSrc+'"/>');
+
+
+
+
+
+	});
+
+	$(function(){
+
+		<!-- Flag click handler -->
+
+		$('.translation-links a').click(function(e) {
+
+			/*e.preventDefault();
+
+			$('.translation-links a').removeClass("active_flag");
+
+			$(this).addClass("active_flag");
+
+			var lang = $(this).data('lang');
+
+			$('#google_translate_element select option').each(function(){
+
+				if($(this).text().indexOf(lang) > -1) {
+
+					$(this).parent().val($(this).val());
+
+					var container = document.getElementById('google_translate_element');
+
+					var select = container.getElementsByTagName('select')[0];
+
+					triggerHtmlEvent(select, 'change');
+
+				}
+
+			});*/
+
+			if($(this).attr('href') == "#googtrans(nl|nl)")
+
+			{
+
+				/*var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+
+				if(!iframe) return;
+
+				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+				var restore_el = innerDoc.getElementsByTagName("button");
+
+
+
+				for(var i = 0; i < restore_el.length; i++){
+
+					if(restore_el[i].id.indexOf("restore") >= 0) {
+
+						restore_el[i].click();
+
+						var close_el = innerDoc.getElementsByClassName("goog-close-link");
+
+						close_el[0].click();
+
+					}
+
+				}*/
+
+				/*var iframe = document.getElementsByTagName('iframe')[0];
+
+				if(!iframe) return;
+
+				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+				var restore_el = innerDoc.getElementsByTagName("button");
+
+				for(var i = 0; i < restore_el.length; i++){
+
+					if(restore_el[i].id.indexOf("restore") >= 0) {
+
+						restore_el[i].click();
+
+					}
+
+				}
+
+				var cancel_el = innerDoc.getElementsByTagName("a");
+
+
+
+				for(var i = 0; i < cancel_el.length; i++){
+
+					if(cancel_el[i].id.indexOf("close") >= 0) {
+
+						cancel_el[i].click();
+
+					}
+
+				}*/
+
+			}
+
+			window.location = $(this).attr('href');
+
+			location.reload();
+
+		});
+
+	});
+
 </script>
-<script type="text/javascript">
-	$(function(){
-		$.ajax({
-			type:"POST",
-			dataType: 'json',
-			url:"/pages/generate-user-activity-xml",
-			beforeSend: function(){
-				//$(".loading_img_div").fadeIn("slow");
-			},
-			headers : {
-				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
-			},
-			success: function(response){
-				//alert()
-			},
-			error: function(){
-				//$(".loading_img_div").fadeOut("slow");
-			}
-		});
-	});
+<script type="text/javascript">
+
+	$(function(){
+
+		$.ajax({
+
+			type:"POST",
+
+			dataType: 'json',
+
+			url:"/pages/generate-user-activity-xml",
+
+			beforeSend: function(){
+
+				//$(".loading_img_div").fadeIn("slow");
+
+			},
+
+			headers : {
+
+				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
+
+			},
+
+			success: function(response){
+
+				//alert()
+
+			},
+
+			error: function(){
+
+				//$(".loading_img_div").fadeOut("slow");
+
+			}
+
+		});
+
+	});
+
 </script>
 <div class="body-blur"></div>
 <header class="header-area" data-lenis-prevent="true">
@@ -302,7 +426,8 @@ fbq('track', 'PageView');
 </li>
 <li>
 <a class="wp" href="https://wa.me/+31618522389" target="_blank">
-<img alt="b-wp.svg" class="" src="images/b-wp.svg"/>Stel hier je vraag
+<img alt="b-wp.svg" class="" src="images/b-wp.svg"/>Stel hier je vraag
+
 			</a>
 </li>
 </ul>
@@ -605,164 +730,318 @@ fbq('track', 'PageView');
 </div>
 </div>
 </div>
-<script>
-    $(function () {
-        var steps = $(".step").hide();
-        var i = 0;
-        const show = () => steps.hide().eq(i).show();
-        $(".next").click(function() {
-            $(steps[i]).find(".error-message").remove();
-            if (i != 0 && i != 7) {
-                let questionName = 'question_' + i;
-                if ($("input[name='" + questionName + "']:checked").length === 0 &&
-                    $("input[name='" + questionName + "[]']:checked").length === 0) {
-                    // Map step to error message element
-                    let errorMessageMap = {
-                        'question_1': '.error-message-1',
-                        'question_2': '.error-message-2',
-                        'question_3': '.error-message-3',
-                        'question_4': '.error-message-4',
-                        'question_5': '.error-message-5',
-                        'question_6': '.error-message-6'
-                    };
-                    // Show error message if applicable
-                    if (errorMessageMap[questionName]) {
-                        $(errorMessageMap[questionName]).html("Selecteer een waarde");
-                    }
-                    return; // Stop advancing
-                }
-            } else if (i == 7) {
-                let valid = true;
-                let telefoonnummer = $(".telefoonnummer");
-                if (!telefoonnummer.val().trim()) {
-                    $(".error-message-telefoonnummer").html("Telefoonnummer is verplicht");
-                    valid = false;
-                }
-                let email = $(".e-mailadres");
-                if (!email.val().trim()) {
-                    $(".error-message-mailadres").html("E-mailadres is verplicht");
-                    valid = false;
-                } else {
-                    let emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-                    if (!emailPattern.test(email.val().trim())) {
-                        $(".error-message-mailadres").html("Ongeldig e-mailadres");
-                        valid = false;
-                    }
-                }
-                if (!valid) return;
-            }
-            // Go to next step
-            if (i < steps.length - 1) i++;
-            show();
-
-            var length = (i * 10) + 20;
-            $(".plan-popup-progress span").css("width", length + "%");
-
-            $(".question_" + i).on("change", function () {
-                $(".error-message-" + i).html("");
-            });
-        });
-
-        $(".prev").click(function() {
-            $(steps[i]).find(".error-message").remove();
-            if (i > 0) i--;
-            show();
-
-            var length = (i * 10) + 20;
-            $(".plan-popup-progress span").css("width", length + "%");
-        });
-
-        $("#telefoonnummer").on("change", function () {
-           $(".error-message-telefoonnummer").html("");
-       
-        });
-         $("#e-mailadres").on("change", function () {
-           $(".error-message-mailadres").html("");
-          
-        });
-
-        $(".final_btn").click(function() {  
-            var q8 = $(".question_8").val().trim();
-
-            if (q8== '' || q8 =='Search for a location') {
-               $(".error-message-8").html("Selecteer een waarde");
-            }else{
-                $(".error-message-8").html("");
-                
-                $("#leads_form").validationEngine();
-                // $("#leads_form").submit(function(){
-                    if($("#leads_form").validationEngine("validate") == true)
-                    {
-                        if($('#token2').val()=='')
-                        {
-                            grecaptcha.ready(function() {
-                                grecaptcha.execute('6LdnRb0kAAAAAKPB-LwupEZ5UKokm8TZDALoaxUJ', {action: 'leads_form'})
-                                .then(function(token) {
-                                // Verify the token on the server.
-                                    $('#loader_section').show();
-                                    $('#token2').val(token);
-                                    $("#leads_form")[0].submit();
-                                });
-                            });
-                            return false;
-                        }
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                // });
-            }
-        });
-        show();
-        $(".plan-popup-progress span").css("width", "20%");
-    });
+<script>
+
+    $(function () {
+
+        var steps = $(".step").hide();
+
+        var i = 0;
+
+        const show = () => steps.hide().eq(i).show();
+
+        $(".next").click(function() {
+
+            $(steps[i]).find(".error-message").remove();
+
+            if (i != 0 && i != 7) {
+
+                let questionName = 'question_' + i;
+
+                if ($("input[name='" + questionName + "']:checked").length === 0 &&
+
+                    $("input[name='" + questionName + "[]']:checked").length === 0) {
+
+                    // Map step to error message element
+
+                    let errorMessageMap = {
+
+                        'question_1': '.error-message-1',
+
+                        'question_2': '.error-message-2',
+
+                        'question_3': '.error-message-3',
+
+                        'question_4': '.error-message-4',
+
+                        'question_5': '.error-message-5',
+
+                        'question_6': '.error-message-6'
+
+                    };
+
+                    // Show error message if applicable
+
+                    if (errorMessageMap[questionName]) {
+
+                        $(errorMessageMap[questionName]).html("Selecteer een waarde");
+
+                    }
+
+                    return; // Stop advancing
+
+                }
+
+            } else if (i == 7) {
+
+                let valid = true;
+
+                let telefoonnummer = $(".telefoonnummer");
+
+                if (!telefoonnummer.val().trim()) {
+
+                    $(".error-message-telefoonnummer").html("Telefoonnummer is verplicht");
+
+                    valid = false;
+
+                }
+
+                let email = $(".e-mailadres");
+
+                if (!email.val().trim()) {
+
+                    $(".error-message-mailadres").html("E-mailadres is verplicht");
+
+                    valid = false;
+
+                } else {
+
+                    let emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+                    if (!emailPattern.test(email.val().trim())) {
+
+                        $(".error-message-mailadres").html("Ongeldig e-mailadres");
+
+                        valid = false;
+
+                    }
+
+                }
+
+                if (!valid) return;
+
+            }
+
+            // Go to next step
+
+            if (i < steps.length - 1) i++;
+
+            show();
+
+
+
+            var length = (i * 10) + 20;
+
+            $(".plan-popup-progress span").css("width", length + "%");
+
+
+
+            $(".question_" + i).on("change", function () {
+
+                $(".error-message-" + i).html("");
+
+            });
+
+        });
+
+
+
+        $(".prev").click(function() {
+
+            $(steps[i]).find(".error-message").remove();
+
+            if (i > 0) i--;
+
+            show();
+
+
+
+            var length = (i * 10) + 20;
+Automotive Veluwe
+            $(".plan-popup-progress span").css("width", length + "%");
+
+        });
+
+
+
+        $("#telefoonnummer").on("change", function () {
+
+           $(".error-message-telefoonnummer").html("");
+
+       
+
+        });
+
+         $("#e-mailadres").on("change", function () {
+
+           $(".error-message-mailadres").html("");
+
+          
+
+        });
+
+
+
+        $(".final_btn").click(function() {  
+
+            var q8 = $(".question_8").val().trim();
+
+
+
+            if (q8== '' || q8 =='Search for a location') {
+
+               $(".error-message-8").html("Selecteer een waarde");
+
+            }else{
+
+                $(".error-message-8").html("");
+
+                
+
+                $("#leads_form").validationEngine();
+
+                // $("#leads_form").submit(function(){
+
+                    if($("#leads_form").validationEngine("validate") == true)
+
+                    {
+
+                        if($('#token2').val()=='')
+
+                        {
+
+                            grecaptcha.ready(function() {
+
+                                grecaptcha.execute('6LdnRb0kAAAAAKPB-LwupEZ5UKokm8TZDALoaxUJ', {action: 'leads_form'})
+
+                                .then(function(token) {
+
+                                // Verify the token on the server.
+
+                                    $('#loader_section').show();
+
+                                    $('#token2').val(token);
+
+                                    $("#leads_form")[0].submit();
+
+                                });
+
+                            });
+
+                            return false;
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        return false;
+
+                    }
+
+                // });
+
+            }
+
+        });
+
+        show();
+
+        $(".plan-popup-progress span").css("width", "20%");
+
+    });
+
 </script><section class="text-center" id="loader_section">
 <img alt="loder_img" border="0" class="" src="images/loder_img.gif"/> <p>Een moment geduld, uw verzoek wordt verwerkt.</p>
 </section>
-<script type="text/javascript">
-<!--
-	$(function(){
-		$.ajax({
-			type:"POST",
-			dataType: 'json',
-			url:"/pages/generate-sitemap",
-			beforeSend: function(){
-				//$(".loading_img_div").fadeIn("slow");
-			},
-			headers : {
-				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
-			},
-			success: function(response){
-				//alert()
-			},
-			error: function(){
-				//$(".loading_img_div").fadeOut("slow");
-			}
-		});
-	});
-//-->
+<script type="text/javascript">
+
+<!--
+
+	$(function(){
+
+		$.ajax({
+
+			type:"POST",
+
+			dataType: 'json',
+
+			url:"/pages/generate-sitemap",
+
+			beforeSend: function(){
+
+				//$(".loading_img_div").fadeIn("slow");
+
+			},
+
+			headers : {
+
+				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
+
+			},
+
+			success: function(response){
+
+				//alert()
+
+			},
+
+			error: function(){
+
+				//$(".loading_img_div").fadeOut("slow");
+
+			}
+
+		});
+
+	});
+
+//-->
+
 </script>
-<script type="text/javascript">
-	$(function(){
-		$.ajax({
-			type:"POST",
-			dataType: 'json',
-			url:"/labs/generate-lab-product-xml",
-			beforeSend: function(){
-				//$(".loading_img_div").fadeIn("slow");
-			},
-			headers : {
-				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
-			},
-			success: function(response){
-				//alert()
-			},
-			error: function(){
-				//$(".loading_img_div").fadeOut("slow");
-			}
-		});
-	});
+<script type="text/javascript">
+
+	$(function(){
+
+		$.ajax({
+
+			type:"POST",
+
+			dataType: 'json',
+
+			url:"/labs/generate-lab-product-xml",
+
+			beforeSend: function(){
+
+				//$(".loading_img_div").fadeIn("slow");
+
+			},
+
+			headers : {
+
+				'X-CSRF-Token': "e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"
+
+			},
+
+			success: function(response){
+
+				//alert()
+
+			},
+
+			error: function(){
+
+				//$(".loading_img_div").fadeOut("slow");
+
+			}
+
+		});
+
+	});
+
 </script> <!--==========================header area end===================-->
 <!--==========================main area===================-->
 <main>
@@ -1097,8 +1376,10 @@ fbq('track', 'PageView');
 <a href="https://www.google.com/maps/place/Morgen+Internet+B.V./@51.5349826,5.0429721,17z/data=!3m1!4b1!4m6!3m5!1s0x47c6be773dc3c421:0xbfda5aecc7b7fd9a!8m2!3d51.5349794!4d5.047843!16s%2Fg%2F1tdzksp2?entry=ttu" target="_blank">Technopol 29<br>5026 SB Tilburg									</br></a>
 </p>
 <p>
-<a href="tel:310133030019">
-										+31(0)13 303 00 19										
+<a href="tel:310133030019">
+
+										+31(0)13 303 00 19										
+
 									</a>
 </p>
 <p>
@@ -1150,35 +1431,64 @@ fbq('track', 'PageView');
 </div>
 </div>
 </footer>
-<script type="text/javascript">
-	$(document).ready(function() {
-	    const replacements = {
-	        "[company_name]": "Morgen Internet B.V.",
-	        "[email]": "advies@morgeninternet.nl",
-	        "[city]": "Tilburg",
-	        "[phone_number]": "+31(0)13 303 00 19",
-	        "[whatsapp_number]": "+31618522389",
-	        "[address]": "Technopol 29",
-	        "[postal_code]": "5026 SB"
-	    };
-	    // Function to replace placeholders in text nodes
-	    function replaceTextNodes(node) {
-	        if (node.nodeType === Node.TEXT_NODE) {
-	            let text = node.nodeValue;
-	            $.each(replacements, function(key, value) {
-	                text = text.replaceAll(key, value);
-	            });
-	            node.nodeValue = text;
-	        } else {
-	            $(node).contents().each(function() {
-	                replaceTextNodes(this);
-	            });
-	        }
-	    }
-
-	    // Start replacing placeholders from the body
-	    replaceTextNodes(document.body);
-	});
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+	    const replacements = {
+
+	        "[company_name]": "Morgen Internet B.V.",
+
+	        "[email]": "advies@morgeninternet.nl",
+
+	        "[city]": "Tilburg",
+
+	        "[phone_number]": "+31(0)13 303 00 19",
+
+	        "[whatsapp_number]": "+31618522389",
+
+	        "[address]": "Technopol 29",
+
+	        "[postal_code]": "5026 SB"
+
+	    };
+
+	    // Function to replace placeholders in text nodes
+
+	    function replaceTextNodes(node) {
+
+	        if (node.nodeType === Node.TEXT_NODE) {
+
+	            let text = node.nodeValue;
+
+	            $.each(replacements, function(key, value) {
+
+	                text = text.replaceAll(key, value);
+
+	            });
+
+	            node.nodeValue = text;
+
+	        } else {
+
+	            $(node).contents().each(function() {
+
+	                replaceTextNodes(this);
+
+	            });
+
+	        }
+
+	    }
+
+
+
+	    // Start replacing placeholders from the body
+
+	    replaceTextNodes(document.body);
+
+	});
+
 </script>
 <div id="mobile-contact-bar">
 <div id="mobile-contact-bar-outer">
@@ -1211,11 +1521,16 @@ fbq('track', 'PageView');
 <form accept-charset="utf-8" action="/pages/cookie_accept" id="cookie_form" method="post"><div style="display:none;"><input name="_method" type="hidden" value="POST"/><input autocomplete="off" name="_csrfToken" type="hidden" value="e9c032c694e0a96b6dad106da344c0cde23e0ffecc52db3941116a172df7f8339ccf2405bc342b8d3ee3bbb387733c869f3e44b73c772851ad29ddf0b0febf68"/></div><input id="form-name" name="form_name" type="hidden" value="cookie_form"/><div class="cookie light-theme position-fixed w-100 pt-md-5 cmn-cookie-info" id="cookiediv">
 <div class="pt-4 px-5 pb-4 mb-2 mt-3">
 <h6>We gebruiken cookies, wil je dat?</h6>
-<p>Cookies zijn kleine tekstbestanden met informatie erin.
-Die plaatsen we kort op je apparaat. Zo zien we bijvoorbeeld welke pagina’s je
-zag, waar je afhaakte en wat je invulde. Op die manier hebben wij informatie
-waar we jouw websitebezoek beter mee maken. Handig toch? Natuurlijk kies je
-zelf of je dat toestaat. Daar zijn we eerlijk over. Klik op “Cookie
+<p>Cookies zijn kleine tekstbestanden met informatie erin.
+
+Die plaatsen we kort op je apparaat. Zo zien we bijvoorbeeld welke pagina’s je
+
+zag, waar je afhaakte en wat je invulde. Op die manier hebben wij informatie
+
+waar we jouw websitebezoek beter mee maken. Handig toch? Natuurlijk kies je
+
+zelf of je dat toestaat. Daar zijn we eerlijk over. Klik op “Cookie
+
 instellingen”, vind meer informatie en beheer je voorkeuren. </p>
 <ul>
 <li>
@@ -1236,12 +1551,18 @@ instellingen”, vind meer informatie en beheer je voorkeuren. </p>
 <div class="cookie-close text-center position-absolute align-items-center justify-content-center d-flex close-f">
 <img alt="cross.svg" border="0" class="" src="images/cross.svg"/> </div>
 <div class="cookie-content-wrap px-5">
-<p>We
-gebruiken cookies om u een betere browse-ervaring te bieden, siteverkeer te
-analyseren, inhoud te personaliseren en gerichte advertenties te tonen. Klik op
-de verschillende catogorieknoppen voor meer informatie. U kunt ook uw
-cookievoorkeuren wijzigen. Houd er rekening mee dat het blokkeren van bepaalde
-soorten cookies van invloed kan zijn op uw ervaring op onze website en de
+<p>We
+
+gebruiken cookies om u een betere browse-ervaring te bieden, siteverkeer te
+
+analyseren, inhoud te personaliseren en gerichte advertenties te tonen. Klik op
+
+de verschillende catogorieknoppen voor meer informatie. U kunt ook uw
+
+cookievoorkeuren wijzigen. Houd er rekening mee dat het blokkeren van bepaalde
+
+soorten cookies van invloed kan zijn op uw ervaring op onze website en de
+
 diensten die we kunnen aanbieden. </p>
 <ul>
 <li>
@@ -1253,7 +1574,8 @@ diensten die we kunnen aanbieden. </p>
 <div class="accordion" id="accordionExample">
 <div class="each-cookie-info info2">
 <div class="d-flex justify-content-between align-items-center">
-<div class="collapsed position-relative" data-bs-target="#content0" data-bs-toggle="collapse">
+<div class="collapsed position-relative" data-bs-target="#content0" data-bs-toggle="collapse">
+
 						Essentiële cookies					</div>
 <label class="switch">
 <!-- <input type="checkbox" checked> -->
@@ -1266,7 +1588,8 @@ diensten die we kunnen aanbieden. </p>
 </div>
 <div class="each-cookie-info">
 <div class="d-flex justify-content-between align-items-center">
-<div class="collapsed position-relative" data-bs-target="#content1" data-bs-toggle="collapse">
+<div class="collapsed position-relative" data-bs-target="#content1" data-bs-toggle="collapse">
+
 						Functionele cookies					</div>
 <label class="switch">
 <!-- <input type="checkbox" checked> -->
@@ -1279,7 +1602,8 @@ diensten die we kunnen aanbieden. </p>
 </div>
 <div class="each-cookie-info">
 <div class="d-flex justify-content-between align-items-center">
-<div class="collapsed position-relative" data-bs-target="#content2" data-bs-toggle="collapse">
+<div class="collapsed position-relative" data-bs-target="#content2" data-bs-toggle="collapse">
+
 						Analytische cookies					</div>
 <label class="switch">
 <!-- <input type="checkbox" checked> -->
@@ -1292,7 +1616,8 @@ diensten die we kunnen aanbieden. </p>
 </div>
 <div class="each-cookie-info">
 <div class="d-flex justify-content-between align-items-center">
-<div class="collapsed position-relative" data-bs-target="#content3" data-bs-toggle="collapse">
+<div class="collapsed position-relative" data-bs-target="#content3" data-bs-toggle="collapse">
+
 						Advertentie cookies					</div>
 <label class="switch">
 <!-- <input type="checkbox" checked> -->
@@ -1314,45 +1639,84 @@ diensten die we kunnen aanbieden. </p>
 </div>
 </div>
 </div>
-<div style="display:none;"><input autocomplete="off" name="_Token[fields]" type="hidden" value="80d211d27e94d0a0a4886ddd3f6b0d3127bcc607%3Aform_name"><input autocomplete="off" name="_Token[unlocked]" type="hidden" value=""/></input></div></form><script>
-	$(document) .ready(function(){
-		$('.cookie-settings').click(function(){
-			$('.cookie-content').removeClass('d-none')
-			$('.cookie').hide()
-		});
-		$('.cookie .cookie-close').click(function(){
-			localStorage.setItem("close_f", "Y");
-			$('.cookie').hide();
-
-			if(localStorage.getItem("close_f") == "Y"){
-				setTimeout(() => {
-				$('.cookie').show();
-					//localStorage.setItem("close_f", "N");
-					localStorage.clear();
-				}, 300000);
-			}
-		});
-		$('.cookie-content .cookie-close').click(function(){
-			$('.cookie-content').hide();
-			localStorage.setItem("close_f", "Y");
-			if(localStorage.getItem("close_f") == "Y"){
-				setTimeout(() => {
-				$('.cookie').show();
-				$('.cookie-content').removeAttr('style');
-				$('.cookie-content').addClass('d-none');
-					//localStorage.setItem("close_f", "N");
-					localStorage.clear();
-				}, 300000);
-			}
-		});
-		$('#few_cookie_accept').click(function(){
-			$('#cookie_form').submit();
-		})
-		$('.all_cookie_accept').click(function(){
-			$('.check_cls').prop('checked', true);
-			$('#cookie_form').submit();
-		})
-	})
+<div style="display:none;"><input autocomplete="off" name="_Token[fields]" type="hidden" value="80d211d27e94d0a0a4886ddd3f6b0d3127bcc607%3Aform_name"><input autocomplete="off" name="_Token[unlocked]" type="hidden" value=""/></input></div></form><script>
+
+	$(document) .ready(function(){
+
+		$('.cookie-settings').click(function(){
+
+			$('.cookie-content').removeClass('d-none')
+
+			$('.cookie').hide()
+
+		});
+
+		$('.cookie .cookie-close').click(function(){
+
+			localStorage.setItem("close_f", "Y");
+
+			$('.cookie').hide();
+
+
+
+			if(localStorage.getItem("close_f") == "Y"){
+
+				setTimeout(() => {
+
+				$('.cookie').show();
+
+					//localStorage.setItem("close_f", "N");
+
+					localStorage.clear();
+
+				}, 300000);
+
+			}
+
+		});
+
+		$('.cookie-content .cookie-close').click(function(){
+
+			$('.cookie-content').hide();
+
+			localStorage.setItem("close_f", "Y");
+
+			if(localStorage.getItem("close_f") == "Y"){
+
+				setTimeout(() => {
+
+				$('.cookie').show();
+
+				$('.cookie-content').removeAttr('style');
+
+				$('.cookie-content').addClass('d-none');
+
+					//localStorage.setItem("close_f", "N");
+
+					localStorage.clear();
+
+				}, 300000);
+
+			}
+
+		});
+
+		$('#few_cookie_accept').click(function(){
+
+			$('#cookie_form').submit();
+
+		})
+
+		$('.all_cookie_accept').click(function(){
+
+			$('.check_cls').prop('checked', true);
+
+			$('#cookie_form').submit();
+
+		})
+
+	})
+
 </script>
 <!--==========================Cookie area end===================-->
 </div>

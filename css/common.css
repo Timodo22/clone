@@ -7,7 +7,7 @@ a {
 }
 a:hover {
 	text-decoration: none;
-	color: #efcd45;
+	color: #7a0000;
 }
 ul {
 	padding: 0;
@@ -78,8 +78,8 @@ p {
 	cursor:pointer;
 }
 .common-btn-styl.active{
-	background:#efcd45;
-	border: 1px solid #efcd45;
+	background:#7a0000;
+	border: 1px solid #7a0000;
 	transition:all 0.5s;
 	-webkit-transition:all 0.5s;
 	

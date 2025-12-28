@@ -1181,7 +1181,7 @@ width:100%;
 
 .aanbod_detail_tab_sec .tab_sec .nav-tabs .nav-item a:hover{
 	color: #121212;
-	background-color: #efcd45;
+	background-color: #7a0000;
 }
 
 .aanbod_detail_tab_sec .tab_sec .nav-tabs .nav-item:nth-child(5) {
@@ -1197,7 +1197,7 @@ width:100%;
 }
 
 .aanbod_detail_tab_sec .nav-tabs .nav-link.active {
-	background-color: #efcd45;
+	background-color: #7a0000;
 	color: #121212;
 }
 .aanbod_detail_tab_sec .nav-tabs .nav-link.active::after {
@@ -1207,7 +1207,7 @@ width:100%;
     left: 40%;
     border-width: 15px 15px 0px;
     border-style: solid;
-    border-color: #efcd45 transparent;
+    border-color: #7a0000 transparent;
     display: block;
     width: 0;
 }
@@ -1303,8 +1303,8 @@ width:100%;
 }
 .dtls_page_form .common-btn-styl:hover{
 	color: #121212;
-	background-color:#efcd45;
-	border: 2px solid #efcd45;
+	background-color:#7a0000;
+	border: 2px solid #7a0000;
 }
 .dtls_page_form button{
 	margin:0 auto 15px;
@@ -1337,7 +1337,7 @@ width:100%;
     width: 100%;
 	cursor:pointer;
 	margin-bottom:40px;
-	background-color:#efcd45;
+	background-color:#7a0000;
 	color:#121212;
 }
 /*.aanbod_detail_tab_sec .accordion .card-header:hover{
@@ -1797,8 +1797,8 @@ background-position: 0% 0%;
 padding: 8px 0 6px 30px;
 }
 .dtls_page_form .accordion .common-btn-styl {
-	background: #efcd45;
-    border: 1px solid #efcd45;
+	background: #7a0000;
+    border: 1px solid #7a0000;
 	color:#121212;
 }
 .dtls_page_form .accordion .common-btn-styl:hover{
@@ -1999,7 +1999,7 @@ padding: 8px 0 6px 30px;
 }
 .widget-btn{
 	border-radius: 10px;
-  	background: #efcd45;
+  	background: #7a0000;
 	box-shadow: 0px 15px 10px 5px rgba(0, 0, 0, 0.07);
 	-webkit-box-shadow: 0px 15px 10px 5px rgba(0, 0, 0, 0.07);
   	padding: 1.3rem 2.5rem;
@@ -2050,13 +2050,13 @@ padding: 8px 0 6px 30px;
 }
 .widget-content h5 span{
 	text-decoration: underline;
-	color: #efcd45;
+	color: #7a0000;
 }
 .widget-content button, .widget-mobile button{
 	border-radius: 5px;
 	color: #121212;
-	border: 2px solid #efcd45;
-  	background: #efcd45;
+	border: 2px solid #7a0000;
+  	background: #7a0000;
 	padding: 1.2rem 2rem;
 	font-size: 1.7rem;
   	font-family: 'Roboto regular';

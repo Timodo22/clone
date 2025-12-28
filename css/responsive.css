@@ -453,7 +453,7 @@ h2{
 		-webkit-filter: brightness(0) invert(1);
 	}
 	.widget-mobile h6 span.active{
-		color: #efcd45;
+		color: #7a0000;
 	}
 	.widget-mobile h6 span.active:after{
 		transform: translateY(-50%) rotate(-90deg);
@@ -481,7 +481,7 @@ h2{
     	padding: 4px 0;
 	}
 	.widget-mobile-content td a:hover{
-		color: #efcd45;
+		color: #7a0000;
 	}
 	.whatsapp-block{
 		background: #25D366;
