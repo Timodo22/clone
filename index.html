@@ -369,10 +369,10 @@ fbq('track', 'PageView');
 <section class="banner-area">
 <div class="swiper-container home-banner">
 <div class="swiper-wrapper">
-<div class="swiper-slide slider-height common_bg_styl" style="background-image:url('images/header_images_0_15764881031112775591.jpg')">
+<div class="swiper-slide slider-height common_bg_styl" style="background-image:url('images/IMG_0399.JPG')">
 <div class="slider-content-wrapper">
 <div class="slider-content text-center">
-<h1>WELKOM BIJ VELUWE AUTOMOTIVE</h1>
+<h1>WELKOM BIJ AUTOMOTIVE VELUWE</h1>
 <div class="slider-btn mt-4">
 <a class="common-btn-styl active" onclick="window.location.href='/aanbod'">Bekijk volledig aanbod</a>
 <a class="common-btn-styl" onclick="window.location.href='/over-ons'">Ons verhaal</a>
@@ -380,7 +380,52 @@ fbq('track', 'PageView');
 </div>
 </div>
 </div>
-<div class="swiper-slide slider-height common_bg_styl" style="background-image:url('images/header_images_1_15762316612065392650.jpg')">
+<style>
+	/* Stap 1: Zorg dat de hoofdcontainer de basis vormt voor positionering */
+.swiper-slide.common_bg_styl {
+    position: relative;
+    /* Zorgt ervoor dat de overlay niet buiten de container komt */
+    overflow: hidden; 
+}
+
+/* Stap 2: Maak de donkere overlay */
+.swiper-slide.common_bg_styl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1; /* Zorg dat deze laag boven de foto ligt */
+}
+
+/* Stap 3: Zorg dat de tekst en knoppen BOVEN de donkere laag liggen */
+.slider-content-wrapper {
+    position: relative; /* Nodig om z-index te laten werken */
+    z-index: 2; /* Hoger dan de overlay (die is 1) */
+}
+
+/* Alleen uitvoeren op schermen breder dan 992 pixels (Laptops/PC's) */
+@media (min-width: 992px) {
+    .slider-content-wrapper {
+        /* Een negatief getal schuift het element omhoog. */
+        /* Hoe groter het getal, hoe hoger hij komt te staan. */
+        transform: translateY(-80px); 
+    }
+}
+.swiper-slide.common_bg_styl {
+    /* Syntax: background-position: [horizontaal] [verticaal]; */
+    /* Standaard staat dit vaak op 'center center' (of 50% 50%). */
+    
+    /* Om de afbeelding visueel OMLAAG te schuiven, 
+       moeten we een lager percentage kiezen voor de verticale positie 
+       (we laten de container focussen op een hoger punt in de foto). */
+    
+    background-position: center 30% !important;
+}
+</style>
+<!-- <div class="swiper-slide slider-height common_bg_styl" style="background-image:url('images/header_images_1_15762316612065392650.jpg')">
 <div class="slider-content-wrapper">
 <div class="slider-content text-center">
 <h1>WELKOM BIJ Veluwe AUTOMOTIVE</h1>
@@ -425,27 +470,9 @@ fbq('track', 'PageView');
 </div>
 </div>
 </div>
-</div>
-<div class="swiper-container home-banner-thumbs">
-<div class="swiper-wrapper">
-<div class="swiper-slide thumb-slide common_bg_styl" style="background-image:url('images/header_images_0_15764881031112775591.jpg')">
-</div>
-<div class="swiper-slide thumb-slide common_bg_styl" style="background-image:url('images/header_images_1_15762316612065392650.jpg')">
-</div>
-<div class="swiper-slide thumb-slide common_bg_styl" style="background-image:url('images/header_images_2_15762316611467167413.jpg')">
-</div>
-<div class="swiper-slide thumb-slide common_bg_styl" style="background-image:url('images/header_images_3_15762333081494766395.jpg')">
-</div>
-<div class="swiper-slide thumb-slide common_bg_styl" style="background-image:url('images/header_images_4_1576233308492339883.jpg')">
-</div>
-</div>
-</div>
-<div class="banner-slider-arrow">
-<div class="swiper-button-next swiper-button-white common_slider_arrow">
-<img alt="nxt" border="0" class="" src="images/banner_slider_nxt.png"/> </div>
-<div class="swiper-button-prev swiper-button-white common_slider_arrow">
-<img alt="prev" border="0" class="" src="images/banner_slider_prev.png"/> </div>
-</div>
+</div> -->
+
+
 </section>
 <script>
 
@@ -817,7 +844,7 @@ Begeleiding tijdens de aankoop, financiering en het verzekeren van je nieuwe dro
 <div class="col-lg-4 pl-1 pr-1">
 <a class="" href="garantie.html">
 <div class="each-gallery-box common_bg_styl">
-<img alt="d_slider4" class="w-100 gallery-image" src="images/6_other_image_15768516171368861779.jpg"/> <div class="gallery-box-heading">
+<img alt="d_slider4" class="w-100 gallery-image" src="images/6_other_image_157685161713688617791.JPG"/> <div class="gallery-box-heading">
 <div class="heading-text">
 <h3>Garantie</h3>
 </div>
