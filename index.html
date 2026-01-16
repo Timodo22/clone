@@ -405,10 +405,14 @@ fbq('track', 'PageView');
 
 h2 {
     font-size: 30px;
-    font-family: 'Raleway', sans-serif; /* Hier de naam aanpassen */
+    font-family: 'Raleway';/* Hier de naam aanpassen */
     font-weight: 300; /* Dit zorgt voor de 'Light' (dunne) uitstraling */
     color: #fff;
     letter-spacing: 4px;
+}
+/* Zorg dat alle elementen Raleway gebruiken */
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, button, select, textarea, th, td {
+    font-family: 'Raleway', sans-serif !important;
 }
 
 /* Stap 3: Zorg dat de tekst en knoppen BOVEN de donkere laag liggen */
