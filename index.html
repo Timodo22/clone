@@ -18,6 +18,7 @@
 <link href="css/responsive.css" rel="stylesheet"/>
 <link href="css/notifyBar.css" rel="stylesheet"/>
 <link href="css/validationEngine.css" rel="stylesheet"/>
+<link rel="preload" as="image" href="images/IMG_0399.JPG">
 <link href="css/font-awesome.css" rel="stylesheet"/>
 <link href="css/fancybox.css" rel="stylesheet"/>
 <script src="js/jquery.js"></script>
@@ -370,74 +371,225 @@ fbq('track', 'PageView');
 <!--==========================main area===================-->
 <main>
 <section class="banner-area">
-<div class="swiper-container home-banner">
-<div class="swiper-wrapper">
 <div class="swiper-slide slider-height common_bg_styl" style="background-image:url('images/IMG_0399.JPG')">
-<div class="slider-content-wrapper">
-<div class="slider-content text-center">
-<h1>WELKOM BIJ AUTOMOTIVE VELUWE</h1>
-<div class="slider-btn mt-4">
-<a class="common-btn-styl active" onclick="window.location.href='/aanbod'">Bekijk volledig aanbod</a>
-<a class="common-btn-styl" onclick="window.location.href='/over-ons'">Ons verhaal</a>
-</div>
-</div>
-</div>
+    
+    <div class="slider-content-wrapper desktop-view">
+        <div class="slider-content text-center">
+            <h1>WELKOM BIJ AUTOMOTIVE VELUWE</h1>
+            <div class="slider-btn mt-4">
+                <a href="aanbod.html" class="common-btn-styl active" style="color: #ffffff !important; font-weight: bold; text-decoration: none;">Bekijk volledig aanbod</a>
+                <a class="common-btn-styl" onclick="window.location.href='/over-ons'">Ons verhaal</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-content-wrapper mobile-view">
+        <div class="slider-content text-center">
+            <h1>WELKOM BIJ<br>AUTOMOTIVE VELUWE</h1>
+            
+            <div class="slider-btn mt-4">
+                <a href="aanbod.html" class="common-btn-styl active" style="display:inline-block; margin-bottom: 10px; color: #ffffff !important; font-weight: bold; text-decoration: none;">Bekijk volledige aanbod</a>
+                <br> <a class="common-btn-styl" onclick="window.location.href='/over-ons'">Ons verhaal</a>
+            </div>
+        </div>
+    </div>
+
 </div>
 <style>
-	/* Stap 1: Zorg dat de hoofdcontainer de basis vormt voor positionering */
+/* --- BASIS & DESKTOP --- */
 .swiper-slide.common_bg_styl {
-    position: relative;
-    /* Zorgt ervoor dat de overlay niet buiten de container komt */
+    position: relative !important; /* Belangrijk: dit zorgt dat de overlay weet waar hij moet blijven */
     overflow: hidden; 
-}
-
-/* Stap 2: Maak de donkere overlay */
-.swiper-slide.common_bg_styl::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    z-index: 1; /* Zorg dat deze laag boven de foto ligt */
 }
 
 h2 {
     font-size: 30px;
-    font-family: 'Raleway';/* Hier de naam aanpassen */
-    font-weight: 300; /* Dit zorgt voor de 'Light' (dunne) uitstraling */
+    font-family: 'Raleway';
+    font-weight: 300; 
     color: #fff;
     letter-spacing: 4px;
 }
-/* Zorg dat alle elementen Raleway gebruiken */
+
 body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, button, select, textarea, th, td {
     font-family: 'Raleway', sans-serif !important;
 }
 
-/* Stap 3: Zorg dat de tekst en knoppen BOVEN de donkere laag liggen */
-.slider-content-wrapper {
-    position: relative; /* Nodig om z-index te laten werken */
-    z-index: 2; /* Hoger dan de overlay (die is 1) */
-}
-
-/* Alleen uitvoeren op schermen breder dan 992 pixels (Laptops/PC's) */
+/* Desktop Overlay + Positie */
 @media (min-width: 992px) {
     .slider-content-wrapper {
-        /* Een negatief getal schuift het element omhoog. */
-        /* Hoe groter het getal, hoe hoger hij komt te staan. */
         transform: translateY(-80px); 
+        position: relative; 
+        z-index: 2; 
+    }
+    .swiper-slide.common_bg_styl {
+        background-position: center 30% !important;
+    }
+    .swiper-slide.common_bg_styl::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3); 
+        z-index: 1; 
     }
 }
+
+/* --- MOBIEL SPECIFIEK --- */
+@media (max-width: 991px) {
+    
+    /* De hoogte van de foto */
+    .slider-height {
+        height: 70vh !important; 
+        min-height: 550px !important;
+    }
+    
+    /* HIER IS DE AANPASSING: */
+    /* Dit verbergt de tekst en knoppen volledig op mobiel */
+    .slider-content-wrapper {
+        display: none !important;
+    }
+}
+
+
+/* --- MOBIELE AANPASSINGEN --- */
+@media (max-width: 991px) {
+    
+    /* 1. De Hoogte & Achtergrond */
+    .slider-height {
+        height: 70vh !important; 
+        min-height: 550px !important;
+    }
+    
+    /* Zorg dat de container "verborgen" overloop heeft, dit is cruciaal voor de overlay fix */
+    .swiper-slide.common_bg_styl {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        width: 100% !important;
+        overflow: hidden !important; /* Alles wat uitsteekt wordt afgeknipt */
+    }
+
+    /* 2. De Overlay - DE FIX VOOR DE RANDEN */
+    .swiper-slide.common_bg_styl::before {
+        content: '';
+        display: block;
+        position: absolute;
+        
+        /* HIER IS DE TRUC: We trekken de overlay 200px over de randen heen */
+        /* Hierdoor bedekt hij ook de padding */
+        top: -200px;     
+        bottom: -200px;  
+        left: 0;
+        right: 0;
+        
+        width: 100% !important;
+        height: auto !important; /* Auto, want top/bottom bepalen de hoogte */
+        
+    }
+
+    /* 3. Tekst Positie */
+    .slider-content-wrapper {
+        position: relative;
+        z-index: 99; 
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start !important; 
+        
+        /* Padding aan de bovenkant voor je tekst */
+        padding-top: 110px !important; 
+    }
+
+    .slider-content h1 {
+        font-size: 26px !important;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+}
+</style>
+
+<style>
+/* --- BASIS & FONTS --- */
+h2 {
+    font-size: 30px;
+    font-family: 'Raleway';
+    font-weight: 300; 
+    color: #fff;
+    letter-spacing: 4px;
+}
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, button, select, textarea, th, td {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+
+/* --- DE FOTO'S --- */
 .swiper-slide.common_bg_styl {
-    /* Syntax: background-position: [horizontaal] [verticaal]; */
-    /* Standaard staat dit vaak op 'center center' (of 50% 50%). */
+    position: relative; overflow: hidden;
+    width: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    margin: 0 !important;
+}
+
+/* ==============================================
+   DESKTOP INSTELLINGEN (Breder dan 992px)
+   ============================================== */
+@media (min-width: 992px) {
+    /* 1. Verberg de mobiele versie */
+    .mobile-view { display: none !important; }
     
-    /* Om de afbeelding visueel OMLAAG te schuiven, 
-       moeten we een lager percentage kiezen voor de verticale positie 
-       (we laten de container focussen op een hoger punt in de foto). */
-    
-    background-position: center 30% !important;
+    /* 2. Toon de desktop versie */
+    .desktop-view { display: block !important; }
+
+    /* 3. Positionering Desktop */
+    .desktop-view {
+        position: relative;
+        z-index: 10;
+        transform: translateY(-80px); 
+    }
+    .swiper-slide.common_bg_styl {
+        background-position: center 30% !important;
+    }
+}
+
+/* ==============================================
+   MOBIEL INSTELLINGEN (Kleiner dan 991px)
+   ============================================== */
+@media (max-width: 991px) {
+    /* 1. Verberg de desktop versie */
+    .desktop-view { display: none !important; }
+
+    /* 2. Toon de mobiele versie */
+    .mobile-view { display: flex !important; }
+
+    /* 3. Hoogte van de banner */
+    .slider-height {
+        height: 70vh !important; 
+        min-height: 550px !important;
+    }
+
+    /* 4. Positionering van de NIEUWE mobiele tekst */
+    .mobile-view {
+        position: absolute !important;
+        top: 0; left: 0; width: 100% !important; height: 100% !important;
+        z-index: 10;
+        
+        flex-direction: column;
+        justify-content: flex-start !important; /* Begin bovenaan */
+        padding-top: 120px !important; /* Afstand vanaf bovenkant */
+    }
+
+    /* 5. Styling van de mobiele tekst */
+    .mobile-view h1 {
+        font-size: 26px !important;
+        line-height: 1.3;
+        margin-bottom: 20px;
+        padding-left: 15px; padding-right: 15px;
+    }
 }
 </style>
 <!-- <div class="swiper-slide slider-height common_bg_styl" style="background-image:url('images/header_images_1_15762316612065392650.jpg')">
@@ -565,22 +717,22 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, button, select, textar
 <div class="swiper-container car_slider">
 <div class="swiper-wrapper">
 <div class="swiper-slide">
-<a href="49883188-volkswagen-tiguan-1-5-etsi-r-line-edition.html">
+<a href="aanbod.html">
 <div class="product_dtls">
 <div class="product-img">
-<img alt="49883188" border="0" class="" src="images/49883188-0.jpg"/> </div>
+<img alt="49883188" border="0" class="" src="images/WhatsApp Image 2026-01-19 at 17.41.41 (2).jpeg"/> </div>
 <div class="about-product">
 <div class="product-name">
-<h3>Volkswagen</h3>
-<p>Tiguan 1.5 eTSI R-Line Edition</p>
+<h3>BMW X5</h3>
+<p>XDrive45e High Executive M- Sport Shadow| 4Wiel sturing| PANO| LuchtV| Laser| 22''| 360º</p>
 </div>
 <div class="product-range">
 <table>
 <tr>
 <td>
-<p>2024 <span>-</span>22.500km</p>
+<p>2022 <span>-</span>59.750km</p>
 </td>
-<td><h3>€ 54.950,-</h3></td>
+<td><h3>€ 67.950,-</h3></td>
 </tr>
 </table>
 </div>
@@ -589,22 +741,22 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, button, select, textar
 </a>
 </div>
 <div class="swiper-slide">
-<a href="49774291-audi-q2-1-4-tfsi-cod-3x-s-line-panoramadak.html">
+<a href="aanbod.html">
 <div class="product_dtls">
 <div class="product-img">
-<img alt="49774291" border="0" class="" src="images/49774291-0.jpg"/> </div>
+<img alt="49774291" border="0" class="" src="images/WhatsApp Image 2026-01-19 at 17.41.41 (3).jpeg"/> </div>
 <div class="about-product">
 <div class="product-name">
-<h3>Audi</h3>
-<p>Q2 1.4 TFSI tekst aanpassen CoD 3x S line Panoramadak</p>
+<h3>Mercedes A180</h3>
+<p>A180 AMG Night Pack| PANO| Sfeerv| LED| Memory| Alcantara</p>
 </div>
 <div class="product-range">
 <table>
 <tr>
 <td>
-<p>2017 <span>-</span>140.853km</p>
+<p>2020 <span>-</span>140.853km</p>
 </td>
-<td><h3>€ 17.950,-</h3></td>
+<td><h3>€ 25.950,-</h3></td>
 </tr>
 </table>
 </div>
@@ -616,19 +768,20 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, button, select, textar
 <a href="49067709-volkswagen-golf-1-5-etsi-r-line-panodak-iq-light.html">
 <div class="product_dtls">
 <div class="product-img">
-<img alt="49067709" border="0" class="" src="images/49067709-0.jpg"/> </div>
+<img alt="49067709" border="0" class="" src="images/WhatsApp Image 2026-01-19 at 17.41.41 (4).jpeg"/> </div>
 <div class="about-product">
 <div class="product-name">
-<h3>Volkswagen</h3>
-<p>Golf 1.5 eTSI R-Line Panodak, IQ Light</p>
+<h3>Volkswagen Polo</h3>
+<p>1.0 TSI R- Line LED| ACC| Carplay| Digidash| 17"| Blue Metallic
+KentekenJTR-55-V</p>
 </div>
 <div class="product-range">
 <table>
 <tr>
 <td>
-<p>2021 <span>-</span>50.800km</p>
+<p>2018 <span>-</span>82.652km</p>
 </td>
-<td><h3>€ 29.950,- of € 515,- /mnd</h3></td>
+<td><h3>€ 15.750,-</h3></td>
 </tr>
 </table>
 </div>
@@ -636,198 +789,14 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, button, select, textar
 </div>
 </a>
 </div>
-<div class="swiper-slide">
-<a href="48725592-volkswagen-golf-2-0-tsi-gti-clubsport-panodak-harman-kardon.html">
-<div class="product_dtls">
-<div class="product-img">
-<img alt="48725592" border="0" class="" src="images/48725592-0.jpg"/> </div>
-<div class="about-product">
-<div class="product-name">
-<h3>Volkswagen</h3>
-<p>Golf 2.0 TSI GTI Clubsport Panodak, Harman Kardon</p>
-</div>
-<div class="product-range">
-<table>
-<tr>
-<td>
-<p>2021 <span>-</span>53.500km</p>
-</td>
-<td><h3>€ 36.950,- of € 635,- /mnd</h3></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="swiper-slide">
-<a href="47733460-audi-tt-rs-2-5-tfsi-quattro-nardo-grey-unieke-uitvoering.html">
-<div class="product_dtls">
-<div class="product-img">
-<img alt="47733460" border="0" class="" src="images/47733460-0.jpg"/> </div>
-<div class="about-product">
-<div class="product-name">
-<h3>Audi</h3>
-<p>TT RS 2.5 TFSI Quattro Nardo Grey Unieke Uitvoering!</p>
-</div>
-<div class="product-range">
-<table>
-<tr>
-<td>
-<p>2019 <span>-</span>17.600km</p>
-</td>
-<td><h3>€ 64.450,- of € 1.105,- /mnd</h3></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="swiper-slide">
-<a href="47559815-volkswagen-touareg-3-0-tsi-4motion-elegance-hybrid.html">
-<div class="product_dtls">
-<div class="product-img">
-<img alt="47559815" border="0" class="" src="images/47559815-0.jpg"/> </div>
-<div class="about-product">
-<div class="product-name">
-<h3>Volkswagen</h3>
-<p>Touareg 3.0 TSi 4MOTION Elegance Hybrid</p>
-</div>
-<div class="product-range">
-<table>
-<tr>
-<td>
-<p>2022 <span>-</span>59.980km</p>
-</td>
-<td><h3>€ 53.950,- of € 925,- /mnd</h3></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="swiper-slide">
-<a href="46790142-audi-a3-sportback-35-tfsi-3x-s-line-panoramadak-virtual.html">
-<div class="product_dtls">
-<div class="product-img">
-<img alt="46790142" border="0" class="" src="images/46790142-0.jpg"/> </div>
-<div class="about-product">
-<div class="product-name">
-<h3>Audi</h3>
-<p>A3 Sportback 35 TFSI 3x S line Panoramadak, Virtual</p>
-</div>
-<div class="product-range">
-<table>
-<tr>
-<td>
-<p>2021 <span>-</span>59.300km</p>
-</td>
-<td><h3>€ 34.950,- of € 487,- /mnd</h3></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="swiper-slide">
-<a href="46212887-volkswagen-golf-1-5-etsi-3x-r-line-panoramadak-black-edition.html">
-<div class="product_dtls">
-<div class="product-img">
-<img alt="46212887" border="0" class="" src="images/46212887-0.jpg"/> </div>
-<div class="about-product">
-<div class="product-name">
-<h3>Volkswagen</h3>
-<p>Golf 1.5 eTSI 3x R-Line Panoramadak Black Edition</p>
-</div>
-<div class="product-range">
-<table>
-<tr>
-<td>
-<p>2020 <span>-</span>65.572km</p>
-</td>
-<td><h3>€ 29.950,- of € 515,- /mnd</h3></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="swiper-slide">
-<a href="45990632-volkswagen-golf-1-5-etsi-3x-r-line-panodak-iq-light.html">
-<div class="product_dtls">
-<div class="product-img">
-<img alt="45990632" border="0" class="" src="images/45990632-0.jpg"/> </div>
-<div class="about-product">
-<div class="product-name">
-<h3>Volkswagen</h3>
-<p>Golf 1.5 eTSI 3x R-Line Panodak, IQ Light</p>
-</div>
-<div class="product-range">
-<table>
-<tr>
-<td>
-<p>2021 <span>-</span>61.300km</p>
-</td>
-<td><h3>€ 29.950,- of € 418,- /mnd</h3></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="swiper-slide">
-<a href="39009937-volkswagen-tiguan-1-5-tsi-3x-r-line-blackstyle-panoramadak.html">
-<div class="product_dtls">
-<div class="product-img">
-<img alt="39009937" border="0" class="" src="images/39009937-0.jpg"/> </div>
-<div class="about-product">
-<div class="product-name">
-<h3>Volkswagen</h3>
-<p>Tiguan 1.5 TSI 3x R-Line BlackStyle Panoramadak</p>
-</div>
-<div class="product-range">
-<table>
-<tr>
-<td>
-<p>2020 <span>-</span>79.000km</p>
-</td>
-<td><h3>€ 37.950,- of € 528,- /mnd</h3></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="swiper-slide">
-<a href="38740606-audi-q7-60-tfsi-e-quattro-competition-s-line-panoramadak.html">
-<div class="product_dtls">
-<div class="product-img">
-<img alt="38740606" border="0" class="" src="images/38740606-0.jpg"/> </div>
-<div class="about-product">
-<div class="product-name">
-<h3>Audi</h3>
-<p>Q7 60 TFSI e Quattro Competition S line, Panoramadak</p>
-</div>
-<div class="product-range">
-<table>
-<tr>
-<td>
-<p>2020 <span>-</span>67.305km</p>
-</td>
-<td><h3>€ 68.950,- of € 1.184,- /mnd</h3></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</a>
-</div>
+
+
+
+
+
+
+
+
 </div>
 <!-- Add Pagination -->
 <div class="swiper-pagination"></div>
@@ -837,7 +806,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, button, select, textar
 <div class="swiper-button-prev common_slider_arrow"><img alt="product-prev" border="0" class="" src="images/product-nxt.png"/></div>
 </div>
 <div class="product-slider-button text-center">
-<button class="common-btn-styl active" onclick="window.location.href='/aanbod'">Bekijk volledig aanbod</button>
+<a href="aanbod.html" class="common-btn-styl active" style="color: #ffffff; text-decoration: none;">Bekijk volledig aanbod</a>
 </div>
 <hr class="divider"/>
 </div>
@@ -1217,6 +1186,32 @@ Begeleiding tijdens de aankoop, financiering en het verzekeren van je nieuwe dro
 			height: 35px;
 			padding-top: 7.5px;
 		}
+
+		/* ... je bestaande CSS code ... */
+
+/* Aanpassing voor mobiele schermen (kleiner dan 768px) */
+@media (max-width: 768px) {
+    .slider-height {
+        /* Gebruik viewport height (vh). 75vh betekent 75% van de schermhoogte */
+        height: 75vh !important; 
+        min-height: 500px !important; /* Zorg dat hij nooit te klein wordt */
+    }
+
+    /* Optioneel: Achtergrondpositie aanpassen zodat de auto goed in beeld blijft bij een hoge banner */
+    .swiper-slide.common_bg_styl {
+        background-position: center center !important;
+        background-size: cover;
+    }
+    
+    /* Zorgt dat de tekst mooi gecentreerd blijft */
+    .slider-content-wrapper {
+        transform: translateY(0) !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+}
 	</style>
 
 </a>
