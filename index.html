@@ -972,7 +972,7 @@ Of het nu gaat om de zoektocht naar die ene specifieke uitvoering, op maat gemaa
 <div class="col-md-4 pr-1 pl-2">
 <div class="signeture-left-rext">
 <h2>Ons verhaal</h2>
-<p>Passie, service en ongekende kwaliteit gaan bij ons hand in hand. Vanaf het eerste moment zijn dat onze pijlers geweest. We willen topservice combineren met topauto’s. Dat dat ons is gelukt, en dat we dagelijks mensen blij kunnen maken, maakt ons trots.</p>
+<p>Bij Automotive Veluwe is een auto kopen of verkopen geen snelle transactie, maar een zorgeloze ervaring gebaseerd op vertrouwen en kwaliteit. Vanuit onze passie voor het vak selecteren wij alleen voertuigen waar we zelf volledig achter staan: technisch perfect, transparant en zonder verrassingen. Wij geloven in een persoonlijke benadering zonder nonsens, waarbij we u volledig ontzorgen met maatwerk in import, onderhoud en detailing. Wij zijn geen standaard autobedrijf, maar uw partner die nét dat stapje extra zet voor een rijbeleving van het hoogste niveau.</p>
 <button class="common-btn-styl active" onclick="window.location.href='/over-ons.html'">Over ons</button>
 </div>
 </div>
@@ -997,6 +997,27 @@ Of het nu gaat om de zoektocht naar die ene specifieke uitvoering, op maat gemaa
 <!--==========================footer area end===================-->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy>
+<script>
+  const removeElfsightBadge = () => {
+    const badge = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+    if (badge) {
+      badge.remove();
+    }
+  };
+
+  // Check direct en na een korte vertraging (omdat de widget traag laadt)
+  window.addEventListener('load', () => {
+    removeElfsightBadge();
+    setTimeout(removeElfsightBadge, 2000); 
+  });
+</script>
+<style>
+    /* Verbergt de Elfsight badge onderaan de widget */
+a[href*="elfsight.com/google-reviews-widget"] {
+    display: none !important;
+}
+</style>
+
 
 <footer class="footer-area">
 <div class="row customize-row">
