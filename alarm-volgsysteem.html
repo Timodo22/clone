@@ -403,64 +403,7 @@ De auto is op die manier altijd te volgen, ook bij diefstal. De kans dat jij je 
 <hr class="divider"/>
 </div>
 </div></section>
-<script src="js/api.js"></script>
-<script type="text/javascript">
 
-<!--
-
-$(function(){
-
-	$("#diensten_form").validationEngine();
-
-	$("#diensten_form").submit(function(){
-
-		if($("#diensten_form").validationEngine("validate") == true)
-
-		{
-
-				if($('#token').val()=='')
-
-			{
-
-			grecaptcha.ready(function() {
-
-				grecaptcha.execute('6Ldier8UAAAAAPGFTs5_1oK2k0QTN2Yifs5FkrZY', {action: 'diensten_form'})
-
-				.then(function(token) {
-
-				// Verify the token on the server.
-
-					$('#loader_section').show();
-
-					$('#token').val(token);
-
-					$("#diensten_form")[0].submit();
-
-				});
-
-			});
-
-			return false;
-
-			}
-
-		}
-
-		else
-
-		{
-
-			return false;
-
-		}
-
-	});
-
-})
-
-//-->
-
-</script>
 <section class="contact-form-area">
 <div class="container">
 <hr class="divider"/>
@@ -658,8 +601,21 @@ $(function(){
 <!--==========================main area end===================-->
 <!--==========================footer area end===================-->
 <script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy>
+<div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy> </div>
+<script>
+  const removeElfsightBadge = () => {
+    const badge = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+    if (badge) {
+      badge.remove();
+    }
+  };
 
+  // Check direct en na een korte vertraging (omdat de widget traag laadt)
+  window.addEventListener('load', () => {
+    removeElfsightBadge();
+    setTimeout(removeElfsightBadge, 1000); 
+  });
+</script>
 <footer class="footer-area">
 <div class="row customize-row">
 <div class="col-md-8 pr-1 pl-2">
@@ -843,8 +799,7 @@ $(function(){
     font-family: 'Raleway', sans-serif !important;
 }
 	</style>
-<a class="morgeninternet-footer" href="zorgelooslight-footer.html" target="_BLANK">
-<img alt="Morgen Internet - Light website" src="images/light-light.png"/>
+
 </a>
 </body>
 </html>

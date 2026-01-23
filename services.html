@@ -405,7 +405,7 @@
 <div class="row">
 <div class="col-md-6 position-relative each_product_height">
 <a class="" href="garantie.html">
-<div class="each_workplates_list common_bg_styl" style="background-image:url('images/6_other_image_1576851400503997879.jpg')"></div>
+<div class="each_workplates_list common_bg_styl" style="background-image:url('images/6_other_image_157685161713688617791.JPG')"></div>
 <div class="workplates_title left_title dl_garantie">
 <h3><span>Garantie</span></h3>
 </div>
@@ -413,7 +413,7 @@
 </div>
 <div class="col-md-6 position-relative each_product_height rt_sec">
 <a class="" href="financiering-lease.html">
-<div class="each_workplates_list common_bg_styl each_workplates_list-rt" style="background-image:url('images/12_other_image_1576235384991065272.jpg')"></div>
+<div class="each_workplates_list common_bg_styl each_workplates_list-rt" style="background-image:url('images/IMG_04691.JPG')"></div>
 <div class="workplates_title right_banner_title dl_garantie">
 <h3><span>Detailing</span></h3>
 </div>
@@ -421,7 +421,7 @@
 </div>
 <div class="col-md-6 position-relative each_product_height">
 <a class="" href="verzekering.html">
-<div class="each_workplates_list common_bg_styl" style="background-image:url('images/7_other_image_15762413501809966022.jpg')"></div>
+<div class="each_workplates_list common_bg_styl" style="background-image:url('images/IMG_03231.JPG')"></div>
 <div class="workplates_title left_title dl_garantie">
 <h3><span>Verzekering</span></h3>
 </div>
@@ -429,7 +429,7 @@
 </div>
 <div class="col-md-6 position-relative each_product_height rt_sec">
 <a class="" href="importservice.html">
-<div class="each_workplates_list common_bg_styl each_workplates_list-rt" style="background-image:url('images/45_other_image_15762420801793623705.jpg')"></div>
+<div class="each_workplates_list common_bg_styl each_workplates_list-rt" style="background-image:url('images/IMG_03431.JPG')"></div>
 <div class="workplates_title right_banner_title dl_garantie">
 <h3><span>Importservice</span></h3>
 </div>
@@ -437,7 +437,7 @@
 </div>
 <div class="col-md-6 position-relative each_product_height">
 <a class="" href="onderhoud.html">
-<div class="each_workplates_list common_bg_styl" style="background-image:url('images/42_other_image_15762430001788415622.jpg')"></div>
+<div class="each_workplates_list common_bg_styl" style="background-image:url('images/IMG_03591.JPG')"></div>
 <div class="workplates_title left_title dl_garantie">
 <h3><span>Onderhoud</span></h3>
 </div>
@@ -473,8 +473,21 @@
 <!--==========================main area end===================-->
 <!--==========================footer area end===================-->
 <script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy>
+<div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy> </div>
+<script>
+  const removeElfsightBadge = () => {
+    const badge = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+    if (badge) {
+      badge.remove();
+    }
+  };
 
+  // Check direct en na een korte vertraging (omdat de widget traag laadt)
+  window.addEventListener('load', () => {
+    removeElfsightBadge();
+    setTimeout(removeElfsightBadge, 1000); 
+  });
+</script>
 <footer class="footer-area">
 <div class="row customize-row">
 <div class="col-md-8 pr-1 pl-2">
@@ -658,8 +671,7 @@
     font-family: 'Raleway', sans-serif !important;
 }
 	</style>
-<a class="morgeninternet-footer" href="zorgelooslight-footer.html" target="_BLANK">
-<img alt="Morgen Internet - Light website" src="images/light-light.png"/>
+
 </a>
 </body>
 </html>

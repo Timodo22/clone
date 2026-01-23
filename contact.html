@@ -289,7 +289,7 @@
 		//-->
 
 		</script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 <!--
 
@@ -852,8 +852,15 @@
 
 	}
 
-</script>
-<section class="map-bg common_bg_styl no-banner" id="map_canvas"></section><section class="contact-details">
+</script> -->
+<section class="map-bg common_bg_styl no-banner" id="map_canvas"><iframe 
+  width="100%" 
+  height="450" 
+  style="border:0; filter: grayscale(100%) invert(90%);" 
+  loading="lazy" 
+  allowfullscreen 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.569436662458!2d5.640621315785084!3d52.02983097972462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6536b3017682d%3A0x1d0f5c123456789!2sDa%20Vincilaan%2041%2C%206716%20WC%20Ede!5e0!3m2!1snl!2snl!4v1620000000000!5m2!1snl!2snl">
+</iframe></section><section class="contact-details">
 <div class="row customize-row">
 <div class="col-md-12 pl-2 pr-2">
 <div class="contact-details-bg">
@@ -1063,8 +1070,21 @@ $(function(){
 <!--==========================main area end===================-->
 <!--==========================footer area end===================-->
 <script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy>
+<div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy> </div>
+<script>
+  const removeElfsightBadge = () => {
+    const badge = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+    if (badge) {
+      badge.remove();
+    }
+  };
 
+  // Check direct en na een korte vertraging (omdat de widget traag laadt)
+  window.addEventListener('load', () => {
+    removeElfsightBadge();
+    setTimeout(removeElfsightBadge, 1000); 
+  });
+</script>
 <footer class="footer-area">
 <div class="row customize-row">
 <div class="col-md-8 pr-1 pl-2">
@@ -1248,8 +1268,7 @@ $(function(){
     font-family: 'Raleway', sans-serif !important;
 }
 	</style>
-<a class="morgeninternet-footer" href="zorgelooslight-footer.html" target="_BLANK">
-<img alt="Morgen Internet - Light website" src="images/light-light.png"/>
+
 </a>
 </body>
 </html>

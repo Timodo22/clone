@@ -673,8 +673,21 @@ $(function(){
 <!--==========================main area end===================-->
 <!--==========================footer area end===================-->
 <script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy>
+<div class="elfsight-app-ab77a997-473a-4381-8fc8-fd654149f612" data-elfsight-app-lazy> </div>
+<script>
+  const removeElfsightBadge = () => {
+    const badge = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+    if (badge) {
+      badge.remove();
+    }
+  };
 
+  // Check direct en na een korte vertraging (omdat de widget traag laadt)
+  window.addEventListener('load', () => {
+    removeElfsightBadge();
+    setTimeout(removeElfsightBadge, 1000); 
+  });
+</script>
 <footer class="footer-area">
 <div class="row customize-row">
 <div class="col-md-8 pr-1 pl-2">
@@ -858,8 +871,7 @@ $(function(){
     font-family: 'Raleway', sans-serif !important;
 }
 	</style>
-<a class="morgeninternet-footer" href="zorgelooslight-footer.html" target="_BLANK">
-<img alt="Morgen Internet - Light website" src="images/light-light.png"/>
+
 </a>
 </body>
 </html>
